@@ -1,17 +1,21 @@
-import { Box, Button, TextField } from '@mui/material';
-import React, { useState } from 'react';
+
+import { Box, Button, TextField } from "@mui/material";
+import React, { useState } from "react";
+import { useProducts } from "../../context/ProductContextProvider";
 
 const AddProduct = () => {
   const [product, setProduct] = useState({
-    name: '',
-    description: '',
+    name: "",
+    description: "",
     price: 0,
-    picture: '',
-    type: '',
+    picture: "",
+    type: "",
   });
 
+  const { addProduct } = useProducts();
+
   const handleInp = (e) => {
-    if (e.target.name == 'price') {
+    if (e.target.name == "price") {
       let obj = {
         ...product,
         [e.target.name]: Number(e.target.value),
@@ -28,58 +32,64 @@ const AddProduct = () => {
 
   console.log(product);
   return (
-    <Box sx={{ width: '60vw', margin: '10vh auto' }}>
+    <Box sx={{ width: "60vw", margin: "10vh auto" }}>
       <TextField
-        sx={{ marginBottom: '10px', borderColor: 'black' }}
+        sx={{ marginBottom: "10px", borderColor: "black" }}
         fullWidth
-        id='outlined-basic'
-        label='Name'
-        name='name'
-        size='small'
-        variant='outlined'
+        id="outlined-basic"
+        label="name"
+        variant="outlined"
+        name="name"
+        size="small"
         onChange={handleInp}
       />
       <TextField
-        sx={{ marginBottom: '10px', borderColor: 'black' }}
+        sx={{ marginBottom: "10px", borderColor: "black" }}
         fullWidth
-        id='outlined-basic'
-        label='Description'
-        name='description'
-        size='small'
-        variant='outlined'
+        id="outlined-basic"
+        label="descripton"
+        variant="outlined"
+        name="description"
+        size="small"
         onChange={handleInp}
       />
       <TextField
-        sx={{ marginBottom: '10px', borderColor: 'black' }}
+        sx={{ marginBottom: "10px", borderColor: "black" }}
         fullWidth
-        id='outlined-basic'
-        label='Price'
-        name='price'
-        size='small'
-        variant='outlined'
+        id="outlined-basic"
+        label="price"
+        variant="outlined"
+        name="price"
+        size="small"
         onChange={handleInp}
       />
       <TextField
-        sx={{ marginBottom: '10px', borderColor: 'black' }}
+        sx={{ marginBottom: "10px", borderColor: "black" }}
         fullWidth
-        id='outlined-basic'
-        label='Picture'
-        name='picture'
-        size='small'
-        variant='outlined'
+        id="outlined-basic"
+        label="Picture"
+        variant="outlined"
+        name="picture"
+        size="small"
         onChange={handleInp}
       />
       <TextField
-        sx={{ marginBottom: '10px', borderColor: 'black' }}
+        sx={{ marginBottom: "10px", borderColor: "black" }}
         fullWidth
-        id='outlined-basic'
-        label='Type'
-        name='type'
-        size='small'
-        variant='outlined'
+        id="outlined-basic"
+        label="Type"
+        variant="outlined"
+        name="type"
+        size="small"
         onChange={handleInp}
       />
-      <Button fullWidth size='large' variant='outlined'>
+      <Button
+        onClick={() => addProduct(product)}
+        fullWidth
+        size="large"
+        variant="outlined"
+      >
+
         Add product
       </Button>
     </Box>

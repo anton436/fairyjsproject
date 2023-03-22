@@ -1,6 +1,7 @@
-import { Box, Button, TextField } from "@mui/material";
+import { Button, TextField } from "@mui/material";
+import { Box } from "@mui/system";
 import React, { useState } from "react";
-import { useProducts } from "../../context/ProductContextProvider";
+import { useProducts } from "../../contexts/ProductContextProvider";
 
 const AddProduct = () => {
   const [product, setProduct] = useState({
@@ -10,7 +11,6 @@ const AddProduct = () => {
     picture: "",
     type: "",
   });
-
   const { addProduct } = useProducts();
 
   const handleInp = (e) => {
@@ -35,56 +35,56 @@ const AddProduct = () => {
         sx={{ marginBottom: "10px", borderColor: "black" }}
         fullWidth
         id="outlined-basic"
-        label="name"
-        variant="outlined"
         name="name"
         size="small"
+        label="Name"
+        variant="outlined"
         onChange={handleInp}
       />
       <TextField
         sx={{ marginBottom: "10px", borderColor: "black" }}
         fullWidth
         id="outlined-basic"
-        label="descripton"
-        variant="outlined"
         name="description"
         size="small"
+        label="Description"
+        variant="outlined"
         onChange={handleInp}
       />
       <TextField
         sx={{ marginBottom: "10px", borderColor: "black" }}
         fullWidth
         id="outlined-basic"
-        label="price"
-        variant="outlined"
         name="price"
         size="small"
+        label="Price"
+        variant="outlined"
         onChange={handleInp}
       />
       <TextField
         sx={{ marginBottom: "10px", borderColor: "black" }}
         fullWidth
         id="outlined-basic"
-        label="Picture"
-        variant="outlined"
         name="picture"
         size="small"
+        label="Picture"
+        variant="outlined"
         onChange={handleInp}
       />
       <TextField
         sx={{ marginBottom: "10px", borderColor: "black" }}
         fullWidth
         id="outlined-basic"
-        label="Type"
-        variant="outlined"
         name="type"
         size="small"
+        label="Type"
+        variant="outlined"
         onChange={handleInp}
       />
       <Button
         onClick={() => addProduct(product)}
         fullWidth
-        size="large"
+        sixe="large"
         variant="outlined"
       >
         Add product

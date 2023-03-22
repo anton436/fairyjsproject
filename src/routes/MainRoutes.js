@@ -1,3 +1,4 @@
+
 import React from "react";
 import AdminPage from "../pages/AdminPage";
 import HomePage from "../pages/HomePage";
@@ -11,11 +12,13 @@ const MainRoutes = () => {
     { link: "/products", element: <ProductsPage />, id: 2 },
     { link: "/admin", element: <AdminPage />, id: 3 },
     { link: "/*", element: <NotFoundPage />, id: 4 },
+
   ];
 
   return (
     <>
       <Routes>
+
         {PUBLICK_ROUTES.map((item) => (
           <Route path={item.link} element={item.element} key={item.id} />
         ))}

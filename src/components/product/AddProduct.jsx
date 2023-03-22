@@ -1,3 +1,4 @@
+
 import { Box, Button, TextField } from "@mui/material";
 import React, { useState } from "react";
 import { useProducts } from "../../context/ProductContextProvider";
@@ -28,6 +29,7 @@ const AddProduct = () => {
       setProduct(obj);
     }
   };
+
   console.log(product);
   return (
     <Box sx={{ width: "60vw", margin: "10vh auto" }}>
@@ -87,6 +89,7 @@ const AddProduct = () => {
         size="large"
         variant="outlined"
       >
+
         Add product
       </Button>
     </Box>

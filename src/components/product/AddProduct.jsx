@@ -1,7 +1,7 @@
-import { Button, TextField } from "@mui/material";
-import { Box } from "@mui/system";
+import { Box, Button, TextField } from "@mui/material";
 import React, { useState } from "react";
-import { useProducts } from "../../contexts/ProductContextProvider";
+import { useProducts } from "../../context/ProductContextProvider";
+import "./Product.css";
 
 const AddProduct = () => {
   const [product, setProduct] = useState({
@@ -11,6 +11,7 @@ const AddProduct = () => {
     picture: "",
     type: "",
   });
+
   const { addProduct } = useProducts();
 
   const handleInp = (e) => {
@@ -28,64 +29,75 @@ const AddProduct = () => {
       setProduct(obj);
     }
   };
+
   console.log(product);
   return (
-    <Box sx={{ width: "60vw", margin: "10vh auto" }}>
+    <Box
+      sx={{
+        width: "70vw",
+        margin: "10vh auto",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
       <TextField
-        sx={{ marginBottom: "10px", borderColor: "black" }}
-        fullWidth
+        className="admin_inp"
         id="outlined-basic"
+        label="name"
+        variant="outlined"
         name="name"
         size="small"
-        label="Name"
-        variant="outlined"
         onChange={handleInp}
       />
       <TextField
-        sx={{ marginBottom: "10px", borderColor: "black" }}
-        fullWidth
+        className="admin_inp"
         id="outlined-basic"
+        label="descripton"
+        variant="outlined"
         name="description"
         size="small"
-        label="Description"
-        variant="outlined"
         onChange={handleInp}
       />
       <TextField
-        sx={{ marginBottom: "10px", borderColor: "black" }}
-        fullWidth
+        className="admin_inp"
         id="outlined-basic"
+        label="price"
+        variant="outlined"
         name="price"
         size="small"
-        label="Price"
-        variant="outlined"
         onChange={handleInp}
       />
       <TextField
-        sx={{ marginBottom: "10px", borderColor: "black" }}
-        fullWidth
+        className="admin_inp"
         id="outlined-basic"
-        name="picture"
-        size="small"
         label="Picture"
         variant="outlined"
+        name="picture"
+        size="small"
         onChange={handleInp}
       />
       <TextField
-        sx={{ marginBottom: "10px", borderColor: "black" }}
-        fullWidth
+        className="admin_inp"
         id="outlined-basic"
-        name="type"
-        size="small"
         label="Type"
         variant="outlined"
+        name="type"
+        size="small"
         onChange={handleInp}
       />
       <Button
+        className="admin_btn"
         onClick={() => addProduct(product)}
-        fullWidth
-        sixe="large"
+        size="large"
         variant="outlined"
+        sx={{
+          border: "1px solid black",
+          color: "white",
+          backgroundColor: "black",
+          fontFamily: "Montserrat, sans-serif",
+        }}
       >
         Add product
       </Button>

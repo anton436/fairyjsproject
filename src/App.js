@@ -5,12 +5,10 @@ import MainRoutes from "./routes/MainRoutes";
 
 const App = () => {
   return (
-    <div>
-      <ProductContextProvider>
-        <Navbar />
-        <MainRoutes />
-      </ProductContextProvider>
-    </div>
+    <ProductContextProvider>
+      <Navbar />
+      <MainRoutes />
+    </ProductContextProvider>
   );
 };
 

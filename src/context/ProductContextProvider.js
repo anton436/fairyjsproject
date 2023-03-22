@@ -2,7 +2,7 @@ import axios from "axios";
 import { createContext, useContext } from "react";
 import { API } from "../helpers/consts";
 
-export const productContext = createContext();
+export const productContext = createContext({});
 export const useProducts = () => {
   return useContext(productContext);
 };

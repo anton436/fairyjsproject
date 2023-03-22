@@ -1,8 +1,8 @@
 import React from "react";
-import AdminPage from "../pages/AdminPage/AdminPage";
-import HomePage from "../pages/HomePage/HomePage";
-import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
-import ProductsPage from "../pages/ProductPage/ProductsPage";
+import AdminPage from "../pages/AdminPage";
+import HomePage from "../pages/HomePage";
+import NotFoundPage from "../pages/NotFoundPage";
+import ProductsPage from "../pages/ProductsPage";
 import { Routes, Route } from "react-router-dom";
 
 const MainRoutes = () => {

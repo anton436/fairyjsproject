@@ -13,8 +13,6 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 
-import { StyledNavbar } from "./styled";
-
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -39,7 +37,7 @@ function Navbar() {
 
   return (
     <AppBar position="static">
-      <StyledNavbar.Wrapper maxWidth="xl">
+      <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
@@ -157,7 +155,7 @@ function Navbar() {
             </Menu>
           </Box>
         </Toolbar>
-      </StyledNavbar.Wrapper>
+      </Container>
     </AppBar>
   );
 }

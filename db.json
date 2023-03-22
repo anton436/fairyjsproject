@@ -1,0 +1,12 @@
+{
+  "products": [
+    {
+      "name": "vnm",
+      "description": "vbnmvbnm",
+      "price": null,
+      "picture": "vn",
+      "type": "tyu",
+      "id": 1
+    }
+  ]
+}

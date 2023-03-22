@@ -34,8 +34,8 @@ const AddProduct = () => {
   return (
     <Box
       sx={{
-        width: "70vw",
-        margin: "10vh auto",
+        width: "40vw",
+        margin: "5vh auto",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -45,7 +45,7 @@ const AddProduct = () => {
       <TextField
         className="admin_inp"
         id="outlined-basic"
-        label="name"
+        label="Name"
         variant="outlined"
         name="name"
         size="small"
@@ -54,7 +54,7 @@ const AddProduct = () => {
       <TextField
         className="admin_inp"
         id="outlined-basic"
-        label="descripton"
+        label="Descripton"
         variant="outlined"
         name="description"
         size="small"
@@ -63,7 +63,7 @@ const AddProduct = () => {
       <TextField
         className="admin_inp"
         id="outlined-basic"
-        label="price"
+        label="Price"
         variant="outlined"
         name="price"
         size="small"

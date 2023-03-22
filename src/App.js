@@ -1,8 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
-import ProductContextProvider from "./context/ProductContextProvider";
+import ProductContextProvider from "./contexts/ProductContextProvider";
 import MainRoutes from "./routes/MainRoutes";
-
 
 const App = () => {
   return (
@@ -10,7 +9,6 @@ const App = () => {
       <Navbar />
       <MainRoutes />
     </ProductContextProvider>
-
   );
 };
 

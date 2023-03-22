@@ -1,17 +1,19 @@
 import axios from "axios";
-import { createContext, useContext } from "react";
+import React, { createContext, useContext } from "react";
 import { API } from "../helpers/consts";
 
-export const productContext = createContext({});
+export const productContext = createContext();
+
 export const useProducts = () => {
   return useContext(productContext);
 };
+
 const ProductContextProvider = ({ children }) => {
   // ! create (post request)
   const addProduct = async (newProduct) => {
     await axios.post(API, newProduct);
   };
-  const values = {addProduct};
+  const values = { addProduct };
   return (
     <productContext.Provider value={values}>{children}</productContext.Provider>
   );

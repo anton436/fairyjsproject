@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import AdminPage from "../pages/AdminPage/AdminPage";
-import EditProductPage from "../pages/EditProductPage/EditProductPage";
+import EditProductPage from "../components/product/EditProduct";
 import HomePage from "../pages/HomePage/HomePage";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import ProductsPage from "../pages/ProductsPage/ProductsPage";

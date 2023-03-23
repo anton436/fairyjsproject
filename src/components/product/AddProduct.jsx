@@ -47,48 +47,53 @@ const AddProduct = () => {
       }}
     >
       <TextField
-        className='admin_inp'
-        id='outlined-basic'
-        label='Name'
-        variant='outlined'
-        name='name'
-        size='small'
+        className="admin_inp"
+        id="outlined-basic"
+        label="Name"
+        variant="outlined"
+        color="grey"
+        name="name"
+        size="small"
         onChange={handleInp}
       />
       <TextField
-        className='admin_inp'
-        id='outlined-basic'
-        label='Descripton'
-        variant='outlined'
-        name='description'
-        size='small'
+        className="admin_inp"
+        id="outlined-basic"
+        label="Descripton"
+        variant="outlined"
+        color="grey"
+        name="description"
+        size="small"
         onChange={handleInp}
       />
       <TextField
-        className='admin_inp'
-        id='outlined-basic'
-        label='Price'
-        variant='outlined'
-        name='price'
-        size='small'
+        className="admin_inp"
+        id="outlined-basic"
+        label="Price"
+        variant="outlined"
+        color="grey"
+        name="price"
+        size="small"
         onChange={handleInp}
       />
       <TextField
-        className='admin_inp'
-        id='outlined-basic'
-        label='Picture'
-        variant='outlined'
-        name='picture'
-        size='small'
+        className="admin_inp"
+        id="outlined-basic"
+        label="Picture"
+        variant="outlined"
+        color="grey"
+        name="picture"
+        size="small"
         onChange={handleInp}
       />
       <TextField
-        className='admin_inp'
-        id='outlined-basic'
-        label='Type'
-        variant='outlined'
-        name='type'
-        size='small'
+        className="admin_inp"
+        id="outlined-basic"
+        label="Type"
+        variant="outlined"
+        color="grey"
+        name="type"
+        size="small"
         onChange={handleInp}
       />
       <Button

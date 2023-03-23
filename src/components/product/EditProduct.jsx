@@ -1,20 +1,20 @@
-import { Box, Button, TextField } from '@mui/material';
-import React, { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import { useProducts } from '../../contexts/ProductContextProvider';
-import './Product.css';
+
+import { Box, Button, TextField } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { useProducts } from "../../contexts/ProductContextProvider";
+import "./Product.css";
+import { useNavigate, useParams } from "react-router";
 
 const EditProduct = () => {
-  const navigate = useNavigate();
   const { getProductDetails, productDetails } = useProducts();
+  const navigate = useNavigate();
   const [product, setProduct] = useState(productDetails);
 
-  console.log(product);
   const { id } = useParams();
-
   useEffect(() => {
     setProduct(productDetails);
   }, [productDetails]);
+
 
   useEffect(() => {
     getProductDetails(id);
@@ -39,6 +39,7 @@ const EditProduct = () => {
   return (
     <Box
       sx={{
+
         width: '40vw',
         margin: '5vh auto',
         display: 'flex',

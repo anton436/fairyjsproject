@@ -1,9 +1,9 @@
-import axios from 'axios';
-import React, { createContext, useContext, useReducer } from 'react';
-import { API } from '../helpers/consts';
+import axios from "axios";
+import React, { createContext, useContext, useReducer } from "react";
+import { API } from "../helpers/consts";
+
 
 export const productContext = createContext();
-
 export const useProducts = () => {
   return useContext(productContext);
 };
@@ -15,10 +15,10 @@ const INIT_STATE = {
 
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
-    case 'GET_PRODUCTS':
+    case "GET_PRODUCTS":
       return { ...state, products: action.payload };
 
-    case 'GET_PRODUCT_DETAILS':
+    case "GET_PRODUCT+DETAILS":
       return { ...state, productDetails: action.payload };
 
     default:
@@ -28,6 +28,13 @@ const reducer = (state = INIT_STATE, action) => {
 
 const ProductContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
+  // ! read (get request)
+
+  const getProducts = async () => {
+    const { data } = await axios(API);
+    dispatch({ type: "GET_PRODUCTS", payload: data });
+  };
+
 
   //! read (get request)
 
@@ -44,11 +51,13 @@ const ProductContextProvider = ({ children }) => {
     getProducts();
   };
 
+
   //! delete
   const deleteProduct = async (id) => {
     await axios.delete(`${API}/${id}`);
     getProducts();
   };
+
 
   //! get product details
   const getProductDetails = async (id) => {

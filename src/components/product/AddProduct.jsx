@@ -1,8 +1,10 @@
-import { Box, Button, TextField } from '@mui/material';
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useProducts } from '../../contexts/ProductContextProvider';
-import './Product.css';
+
+import { Box, Button, TextField } from "@mui/material";
+import React, { useState } from "react";
+import { useProducts } from "../../contexts/ProductContextProvider";
+import "./Product.css";
+import { useNavigate } from "react-router";
+
 
 const AddProduct = () => {
   const navigate = useNavigate();
@@ -88,13 +90,15 @@ const AddProduct = () => {
         onChange={handleInp}
       />
       <Button
-        className='admin_btn'
+
+        className="admin_btn"
         onClick={() => {
           addProduct(product);
-          navigate('/products');
+          navigate("/products");
         }}
-        size='large'
-        variant='outlined'
+        size="large"
+        variant="outlined"
+
         sx={{
           border: '1px solid black',
           color: 'white',

@@ -1,7 +1,8 @@
-import { Box } from '@mui/material';
-import React, { useEffect } from 'react';
-import { useProducts } from '../../contexts/ProductContextProvider';
-import ProductCard from './ProductCard';
+import { Box } from "@mui/material";
+import React, { useEffect } from "react";
+import { useProducts } from "../../contexts/ProductContextProvider";
+import ProductCard from "./ProductCard";
+
 
 const ProductList = () => {
   const { getProducts, products } = useProducts();

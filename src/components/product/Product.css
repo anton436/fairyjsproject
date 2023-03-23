@@ -1,0 +1,9 @@
+.admin_inp {
+  margin-bottom: 2% !important;
+  width: 70%;
+}
+
+.admin_btn:hover {
+  background-color: #bea787 !important;
+  color: black;
+}

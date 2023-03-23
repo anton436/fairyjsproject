@@ -1,6 +1,7 @@
 import { Box, Button, TextField } from "@mui/material";
 import React, { useState } from "react";
 import { useProducts } from "../../context/ProductContextProvider";
+import "./Product.css";
 
 const AddProduct = () => {
   const [product, setProduct] = useState({
@@ -29,40 +30,45 @@ const AddProduct = () => {
   };
   console.log(product);
   return (
-    <Box sx={{ width: "60vw", margin: "10vh auto" }}>
+    <Box
+      sx={{
+        width: "40vw",
+        margin: "5vh auto",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
       <TextField
-        sx={{ marginBottom: "10px", borderColor: "black" }}
-        fullWidth
+        className="admin_inp"
         id="outlined-basic"
-        label="name"
+        label="Name"
         variant="outlined"
         name="name"
         size="small"
         onChange={handleInp}
       />
       <TextField
-        sx={{ marginBottom: "10px", borderColor: "black" }}
-        fullWidth
+        className="admin_inp"
         id="outlined-basic"
-        label="descripton"
+        label="Descripton"
         variant="outlined"
         name="description"
         size="small"
         onChange={handleInp}
       />
       <TextField
-        sx={{ marginBottom: "10px", borderColor: "black" }}
-        fullWidth
+        className="admin_inp"
         id="outlined-basic"
-        label="price"
+        label="Price"
         variant="outlined"
         name="price"
         size="small"
         onChange={handleInp}
       />
       <TextField
-        sx={{ marginBottom: "10px", borderColor: "black" }}
-        fullWidth
+        className="admin_inp"
         id="outlined-basic"
         label="Picture"
         variant="outlined"
@@ -71,8 +77,7 @@ const AddProduct = () => {
         onChange={handleInp}
       />
       <TextField
-        sx={{ marginBottom: "10px", borderColor: "black" }}
-        fullWidth
+        className="admin_inp"
         id="outlined-basic"
         label="Type"
         variant="outlined"
@@ -81,10 +86,16 @@ const AddProduct = () => {
         onChange={handleInp}
       />
       <Button
+        className="admin_btn"
         onClick={() => addProduct(product)}
-        fullWidth
         size="large"
         variant="outlined"
+        sx={{
+          border: "1px solid black",
+          color: "white",
+          backgroundColor: "black",
+          fontFamily: "Montserrat, sans-serif",
+        }}
       >
         Add product
       </Button>

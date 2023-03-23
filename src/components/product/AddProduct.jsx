@@ -1,23 +1,26 @@
+
 import { Box, Button, TextField } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 
 import { useProducts } from "../../contexts/ProductContextProvider";
 import "./Product.css";
+import { useNavigate } from "react-router";
+
 
 const AddProduct = () => {
   const navigate = useNavigate();
   const [product, setProduct] = useState({
-    name: "",
-    description: "",
+    name: '',
+    description: '',
     price: 0,
-    picture: "",
-    type: "",
+    picture: '',
+    type: '',
   });
   const { addProduct } = useProducts();
 
   const handleInp = (e) => {
-    if (e.target.name == "price") {
+    if (e.target.name == 'price') {
       let obj = {
         ...product,
         [e.target.name]: Number(e.target.value),
@@ -35,12 +38,12 @@ const AddProduct = () => {
   return (
     <Box
       sx={{
-        width: "40vw",
-        margin: "5vh auto",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
+        width: '40vw',
+        margin: '5vh auto',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
       }}
     >
       <TextField
@@ -94,6 +97,7 @@ const AddProduct = () => {
         onChange={handleInp}
       />
       <Button
+
         className="admin_btn"
         onClick={() => {
           addProduct(product);
@@ -101,11 +105,12 @@ const AddProduct = () => {
         }}
         size="large"
         variant="outlined"
+
         sx={{
-          border: "1px solid black",
-          color: "white",
-          backgroundColor: "black",
-          fontFamily: "Montserrat, sans-serif",
+          border: '1px solid black',
+          color: 'white',
+          backgroundColor: 'black',
+          fontFamily: 'Montserrat, sans-serif',
         }}
       >
         Add product

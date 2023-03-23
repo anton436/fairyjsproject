@@ -1,4 +1,5 @@
 
+
 import { Box, Button, TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useProducts } from "../../contexts/ProductContextProvider";
@@ -39,6 +40,7 @@ const EditProduct = () => {
   return (
     <Box
       sx={{
+
 
         width: '40vw',
         margin: '5vh auto',

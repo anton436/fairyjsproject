@@ -17,6 +17,7 @@ const reducer = (state = INIT_STATE, action) => {
     case "GET_PRODUCTS":
       return { ...state, products: action.payload };
 
+
     case "GET_PRODUCT+DETAILS":
       return { ...state, productDetails: action.payload };
 
@@ -24,6 +25,7 @@ const reducer = (state = INIT_STATE, action) => {
       return state;
   }
 };
+
 
 const ProductContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
@@ -63,6 +65,7 @@ const ProductContextProvider = ({ children }) => {
     getProductDetails,
     productDetails: state.productDetails,
   };
+
   return (
     <productContext.Provider value={values}>{children}</productContext.Provider>
   );

@@ -43,8 +43,14 @@ const AddProduct = () => {
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
+        background:'rgb(254, 249, 239)',
+        gap: '30px',
+        padding: '20px'
       }}
     >
+      <h1 className="admin_header" align="center">
+        ADMIN PAGE
+      </h1>
       <TextField
         className="admin_inp"
         id="outlined-basic"

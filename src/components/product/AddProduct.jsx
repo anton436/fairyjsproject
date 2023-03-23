@@ -1,7 +1,6 @@
-import { Button, TextField } from "@mui/material";
-import { Box } from "@mui/system";
+import { Box, Button, TextField } from "@mui/material";
 import React, { useState } from "react";
-import { useProducts } from "../../contexts/ProductContextProvider";
+import { useProducts } from "../../context/ProductContextProvider";
 
 const AddProduct = () => {
   const [product, setProduct] = useState({
@@ -35,56 +34,56 @@ const AddProduct = () => {
         sx={{ marginBottom: "10px", borderColor: "black" }}
         fullWidth
         id="outlined-basic"
+        label="name"
+        variant="outlined"
         name="name"
         size="small"
-        label="Name"
-        variant="outlined"
         onChange={handleInp}
       />
       <TextField
         sx={{ marginBottom: "10px", borderColor: "black" }}
         fullWidth
         id="outlined-basic"
+        label="descripton"
+        variant="outlined"
         name="description"
         size="small"
-        label="Description"
-        variant="outlined"
         onChange={handleInp}
       />
       <TextField
         sx={{ marginBottom: "10px", borderColor: "black" }}
         fullWidth
         id="outlined-basic"
+        label="price"
+        variant="outlined"
         name="price"
         size="small"
-        label="Price"
-        variant="outlined"
         onChange={handleInp}
       />
       <TextField
         sx={{ marginBottom: "10px", borderColor: "black" }}
         fullWidth
         id="outlined-basic"
-        name="picture"
-        size="small"
         label="Picture"
         variant="outlined"
+        name="picture"
+        size="small"
         onChange={handleInp}
       />
       <TextField
         sx={{ marginBottom: "10px", borderColor: "black" }}
         fullWidth
         id="outlined-basic"
-        name="type"
-        size="small"
         label="Type"
         variant="outlined"
+        name="type"
+        size="small"
         onChange={handleInp}
       />
       <Button
         onClick={() => addProduct(product)}
         fullWidth
-        sixe="large"
+        size="large"
         variant="outlined"
       >
         Add product

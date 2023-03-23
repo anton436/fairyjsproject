@@ -10,7 +10,6 @@ const AddProduct = () => {
     picture: "",
     type: "",
   });
-
   const { addProduct } = useProducts();
 
   const handleInp = (e) => {
@@ -28,7 +27,6 @@ const AddProduct = () => {
       setProduct(obj);
     }
   };
-
   console.log(product);
   return (
     <Box

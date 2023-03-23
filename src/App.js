@@ -10,7 +10,6 @@ const App = () => {
     <ProductContextProvider>
       <Navbar />
       <MainRoutes />
-      <Company />
     </ProductContextProvider>
   );
 };

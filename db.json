@@ -1,0 +1,12 @@
+{
+  "products": [
+    {
+      "name": "aaa",
+      "description": "some desctiption",
+      "price": 22,
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtp4qBahxnmeIiVC6b4BByEvTI2Jnr6WhkTg&usqp=CAU",
+      "type": "Phone",
+      "id": 1
+    }
+  ]
+}

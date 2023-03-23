@@ -1,9 +1,12 @@
 import { Box, Button, TextField } from "@mui/material";
 import React, { useState } from "react";
-import { useProducts } from "../../context/ProductContextProvider";
+import { useNavigate } from "react-router";
+
+import { useProducts } from "../../contexts/ProductContextProvider";
 import "./Product.css";
 
 const AddProduct = () => {
+  const navigate = useNavigate();
   const [product, setProduct] = useState({
     name: "",
     description: "",
@@ -11,7 +14,6 @@ const AddProduct = () => {
     picture: "",
     type: "",
   });
-
   const { addProduct } = useProducts();
 
   const handleInp = (e) => {
@@ -29,7 +31,6 @@ const AddProduct = () => {
       setProduct(obj);
     }
   };
-
   console.log(product);
   return (
     <Box
@@ -47,6 +48,7 @@ const AddProduct = () => {
         id="outlined-basic"
         label="Name"
         variant="outlined"
+        color="grey"
         name="name"
         size="small"
         onChange={handleInp}
@@ -56,6 +58,7 @@ const AddProduct = () => {
         id="outlined-basic"
         label="Descripton"
         variant="outlined"
+        color="grey"
         name="description"
         size="small"
         onChange={handleInp}
@@ -65,6 +68,7 @@ const AddProduct = () => {
         id="outlined-basic"
         label="Price"
         variant="outlined"
+        color="grey"
         name="price"
         size="small"
         onChange={handleInp}
@@ -74,6 +78,7 @@ const AddProduct = () => {
         id="outlined-basic"
         label="Picture"
         variant="outlined"
+        color="grey"
         name="picture"
         size="small"
         onChange={handleInp}
@@ -83,13 +88,17 @@ const AddProduct = () => {
         id="outlined-basic"
         label="Type"
         variant="outlined"
+        color="grey"
         name="type"
         size="small"
         onChange={handleInp}
       />
       <Button
         className="admin_btn"
-        onClick={() => addProduct(product)}
+        onClick={() => {
+          addProduct(product);
+          navigate("/products");
+        }}
         size="large"
         variant="outlined"
         sx={{

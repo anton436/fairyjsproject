@@ -1,5 +1,3 @@
-
-
 import { Box, Button, TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useProducts } from "../../contexts/ProductContextProvider";
@@ -16,13 +14,12 @@ const EditProduct = () => {
     setProduct(productDetails);
   }, [productDetails]);
 
-
   useEffect(() => {
     getProductDetails(id);
   }, []);
 
   const handleInp = (e) => {
-    if (e.target.name == 'price') {
+    if (e.target.name == "price") {
       let obj = {
         ...product,
         [e.target.name]: Number(e.target.value),
@@ -40,73 +37,71 @@ const EditProduct = () => {
   return (
     <Box
       sx={{
-
-
-        width: '40vw',
-        margin: '5vh auto',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'column',
+        width: "40vw",
+        margin: "5vh auto",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
       }}
     >
       <TextField
-        className='admin_inp'
-        id='outlined-basic'
-        label='Name'
-        variant='outlined'
-        name='name'
-        size='small'
+        className="admin_inp"
+        id="outlined-basic"
+        label="Name"
+        variant="outlined"
+        name="name"
+        size="small"
         onChange={handleInp}
       />
       <TextField
-        className='admin_inp'
-        id='outlined-basic'
-        label='Descripton'
-        variant='outlined'
-        name='description'
-        size='small'
+        className="admin_inp"
+        id="outlined-basic"
+        label="Descripton"
+        variant="outlined"
+        name="description"
+        size="small"
         onChange={handleInp}
       />
       <TextField
-        className='admin_inp'
-        id='outlined-basic'
-        label='Price'
-        variant='outlined'
-        name='price'
-        size='small'
+        className="admin_inp"
+        id="outlined-basic"
+        label="Price"
+        variant="outlined"
+        name="price"
+        size="small"
         onChange={handleInp}
       />
       <TextField
-        className='admin_inp'
-        id='outlined-basic'
-        label='Picture'
-        variant='outlined'
-        name='picture'
-        size='small'
+        className="admin_inp"
+        id="outlined-basic"
+        label="Picture"
+        variant="outlined"
+        name="picture"
+        size="small"
         onChange={handleInp}
       />
       <TextField
-        className='admin_inp'
-        id='outlined-basic'
-        label='Type'
-        variant='outlined'
-        name='type'
-        size='small'
+        className="admin_inp"
+        id="outlined-basic"
+        label="Type"
+        variant="outlined"
+        name="type"
+        size="small"
         onChange={handleInp}
       />
       <Button
-        className='admin_btn'
+        className="admin_btn"
         onClick={() => {
-          navigate('/products');
+          navigate("/products");
         }}
-        size='large'
-        variant='outlined'
+        size="large"
+        variant="outlined"
         sx={{
-          border: '1px solid black',
-          color: 'white',
-          backgroundColor: 'black',
-          fontFamily: 'Montserrat, sans-serif',
+          border: "1px solid black",
+          color: "white",
+          backgroundColor: "black",
+          fontFamily: "Montserrat, sans-serif",
         }}
       >
         save changes

@@ -7,16 +7,18 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Modal from "@mui/material/Modal";
+import logo from "./images/logo_icon.png";
+import call from "./images/icon_call.png";
+import instagram from "./images/instagram_icon.png";
+
+import "./navbar.css";
 
 const pages = [
   { name: "Каталог кроватей", link: "/", id: 1 },
@@ -40,8 +42,6 @@ const style = {
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  // const [anchorElUser, setAnchorElUser] = React.useState(null);
-
   const [city, setCity] = React.useState("");
 
   const handleChange = (event) => {
@@ -51,27 +51,19 @@ function Navbar() {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  // const handleOpenUserMenu = (event) => {
-  //   setAnchorElUser(event.currentTarget);
-  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-  // const handleCloseUserMenu = () => {
-  //   setAnchorElUser(null);
-  // };
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{ backgroundColor: "#fef9ef" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography
             variant="h6"
             noWrap
@@ -87,11 +79,7 @@ function Navbar() {
               textDecoration: "none",
             }}
           >
-            <img
-              src="https://cdn-icons-png.flaticon.com/128/4995/4995993.png"
-              alt="error"
-              width={50}
-            />
+            <img src={logo} alt="error" width={80} />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -123,14 +111,18 @@ function Navbar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page.name}</Typography>
-                </MenuItem>
+              {pages.map((page, index) => (
+                <Link key={index} to={page.link}>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography id="page_adapt_link" textAlign="center">
+                      {page.name}
+                    </Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+
           <Typography
             variant="h5"
             noWrap
@@ -140,32 +132,42 @@ function Navbar() {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
+
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
             }}
           >
-            LOGO
+            <img
+              sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
+              src={logo}
+              alt="error"
+              width={80}
+            />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Link to={page.link}>
+            {pages.map((page, index) => (
+              <Link key={index} to={page.link}>
                 <Button
-                  key={page.name}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{ my: 2, display: "block" }}
                 >
-                  {page.name}
+                  <Typography id="pages_link">{page.name}</Typography>
                 </Button>
               </Link>
             ))}
           </Box>
           <Button
-            style={{ color: "black", border: "1px solid black" }}
+            className="btn_contact"
+            style={{ color: "black", border: "none" }}
             onClick={handleOpen}
           >
+            <img
+              src={call}
+              alt="error"
+              style={{ width: "20px", marginRight: "10px" }}
+            />
             Связаться
           </Button>
           <Modal
@@ -190,20 +192,7 @@ function Navbar() {
 
           <Link to="https://instagram.com/makerskg?igshid=YmMyMTA2M2Y=">
             <IconButton>
-              <img
-                width={30}
-                src="https://cdn-icons-png.flaticon.com/128/717/717392.png"
-                alt="error"
-              />
-            </IconButton>
-          </Link>
-          <Link to="https://t.me/+LQ0EHsQjQs81ZGYy">
-            <IconButton>
-              <img
-                width={30}
-                src="https://cdn-icons-png.flaticon.com/128/2582/2582606.png"
-                alt="error"
-              />
+              <img width={20} src={instagram} alt="error" />
             </IconButton>
           </Link>
 

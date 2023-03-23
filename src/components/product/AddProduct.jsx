@@ -1,9 +1,11 @@
 import { Box, Button, TextField } from "@mui/material";
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 import { useProducts } from "../../contexts/ProductContextProvider";
 import "./Product.css";
 
 const AddProduct = () => {
+  const navigate = useNavigate();
   const [product, setProduct] = useState({
     name: "",
     description: "",
@@ -87,7 +89,10 @@ const AddProduct = () => {
       />
       <Button
         className="admin_btn"
-        onClick={() => addProduct(product)}
+        onClick={() => {
+          addProduct(product);
+          navigate("/products");
+        }}
         size="large"
         variant="outlined"
         sx={{

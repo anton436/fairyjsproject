@@ -5,6 +5,7 @@ const AdminPage = () => {
   return (
     <div>
       <h1 align="center">ADMIN PAGE</h1>
+
       <AddProduct />
     </div>
   );

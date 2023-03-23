@@ -3,7 +3,6 @@ import React, { createContext, useContext, useReducer } from "react";
 import { API } from "../helpers/consts";
 
 export const productContext = createContext();
-
 export const useProducts = () => {
   return useContext(productContext);
 };
@@ -18,40 +17,46 @@ const reducer = (state = INIT_STATE, action) => {
     case "GET_PRODUCTS":
       return { ...state, products: action.payload };
 
-    case "GET_PRODUCT_DETAILS":
+
+    case "GET_PRODUCT+DETAILS":
       return { ...state, productDetails: action.payload };
 
     default:
       return state;
   }
 };
+
+
 const ProductContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
-  // ! read (get request)
+  //! read (get request)
+
   const getProducts = async () => {
     const { data } = await axios.get(API);
+
     dispatch({ type: "GET_PRODUCTS", payload: data });
   };
+  console.log(state);
 
   // ! create (post request)
   const addProduct = async (newProduct) => {
     await axios.post(API, newProduct);
+    getProducts();
   };
 
   //! delete
-
   const deleteProduct = async (id) => {
     await axios.delete(`${API}/${id}`);
     getProducts();
   };
 
-  // ! get product details
-
+  //! get product details
   const getProductDetails = async (id) => {
     const { data } = await axios.get(`${API}/${id}`);
     dispatch({ type: "GET_PRODUCT_DETAILS", payload: data });
   };
+
   const values = {
     addProduct,
     getProducts,
@@ -60,6 +65,7 @@ const ProductContextProvider = ({ children }) => {
     getProductDetails,
     productDetails: state.productDetails,
   };
+
   return (
     <productContext.Provider value={values}>{children}</productContext.Provider>
   );

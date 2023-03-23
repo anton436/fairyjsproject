@@ -15,6 +15,7 @@ const MainRoutes = () => {
     { link: "/*", element: <NotFoundPage />, id: 4 },
     { link: "/edit/:id", element: <EditProductPage />, id: 5 },
     { link: "/company", element: <Company />, id: 6 },
+
   ];
   return (
     <>

@@ -12,34 +12,66 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import { Link, useNavigate } from "react-router-dom";
+import InputLabel from "@mui/material/InputLabel";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import Modal from "@mui/material/Modal";
 
-const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const pages = [
+  { name: "Каталог кроватей", link: "/", id: 1 },
+  { name: "Компания", link: "/products", id: 2 },
+  { name: "Блог", link: "/admin", id: 3 },
+  { name: "Контакты", link: "/comp", id: 4 },
+  { name: "", link: "/*", id: 5 },
+];
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  // const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const [city, setCity] = React.useState("");
+
+  const handleChange = (event) => {
+    setCity(event.target.value);
+  };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  // const handleOpenUserMenu = (event) => {
+  //   setAnchorElUser(event.currentTarget);
+  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  // const handleCloseUserMenu = () => {
+  //   setAnchorElUser(null);
+  // };
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography
             variant="h6"
             noWrap
@@ -55,7 +87,11 @@ function Navbar() {
               textDecoration: "none",
             }}
           >
-            LOGO
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/4995/4995993.png"
+              alt="error"
+              width={50}
+            />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -89,7 +125,7 @@ function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -115,44 +151,80 @@ function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
+              <Link to={page.link}>
+                <Button
+                  key={page.name}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "white", display: "block" }}
+                >
+                  {page.name}
+                </Button>
+              </Link>
             ))}
           </Box>
+          <Button
+            style={{ color: "black", border: "1px solid black" }}
+            onClick={handleOpen}
+          >
+            Связаться
+          </Button>
+          <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box sx={style}>
+              <Typography id="modal-modal-title" variant="h6" component="h2">
+                Связаться с нами
+              </Typography>
+              <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                WhatsUp: 05489065786
+                <br />
+                Telegram: 05489065786
+                <br />
+                Почта : fdjghudh@cvhbjck
+              </Typography>
+            </Box>
+          </Modal>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+          <Link to="https://instagram.com/makerskg?igshid=YmMyMTA2M2Y=">
+            <IconButton>
+              <img
+                width={30}
+                src="https://cdn-icons-png.flaticon.com/128/717/717392.png"
+                alt="error"
+              />
+            </IconButton>
+          </Link>
+          <Link to="https://t.me/+LQ0EHsQjQs81ZGYy">
+            <IconButton>
+              <img
+                width={30}
+                src="https://cdn-icons-png.flaticon.com/128/2582/2582606.png"
+                alt="error"
+              />
+            </IconButton>
+          </Link>
+
+          <Box>
+            <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+              <InputLabel id="demo-select-small">City</InputLabel>
+              <Select
+                labelId="demo-select-small"
+                id="demo-select-small"
+                value={city}
+                label="City"
+                onChange={handleChange}
+              >
+                <MenuItem value="">
+                  <em>None</em>
                 </MenuItem>
-              ))}
-            </Menu>
+                <MenuItem value={1}>Bishkek</MenuItem>
+                <MenuItem value={2}>Osh</MenuItem>
+                <MenuItem value={3}>Naryn</MenuItem>
+              </Select>
+            </FormControl>
           </Box>
         </Toolbar>
       </Container>

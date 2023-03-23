@@ -1,12 +1,20 @@
 {
   "products": [
     {
+<<<<<<< HEAD
       "name": "vnm",
       "description": "vbnmvbnm",
       "price": null,
       "picture": "vn",
       "type": "tyu",
 
+=======
+      "name": "qdqw",
+      "description": "wdqdq",
+      "price": 23,
+      "picture": "ewcw",
+      "type": "wece",
+>>>>>>> 9428bc07196c687d788da2dd0088da67b5c213b7
       "id": 1
     }
   ]

@@ -6,6 +6,7 @@ export const productContext = createContext();
 export const useProducts = () => {
   return useContext(productContext);
 };
+
 const ProductContextProvider = ({ children }) => {
   // ! create (post request)
   const addProduct = async (newProduct) => {

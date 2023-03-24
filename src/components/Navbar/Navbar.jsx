@@ -63,7 +63,7 @@ function Navbar() {
   return (
     <AppBar position="static" style={{ backgroundColor: "#fef9ef" }}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters sx={{ borderRight: "1px solid #DDDDDD" }}>
           <Typography
             variant="h6"
             noWrap
@@ -79,10 +79,15 @@ function Navbar() {
               textDecoration: "none",
             }}
           >
-            <img src={logo} alt="error" width={80} />
+            <img src={logo} alt="error" width={88} />
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -136,7 +141,6 @@ function Navbar() {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
@@ -150,7 +154,14 @@ function Navbar() {
               width={80}
             />
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              borderLeft: "1px solid #DDDDDD",
+              borderRight: "1px solid #DDDDDD",
+            }}
+          >
             {pages.map((page, index) => (
               <Link
                 style={{ textDecoration: "none" }}

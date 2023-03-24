@@ -17,15 +17,15 @@ import Modal from "@mui/material/Modal";
 import logo from "./images/logo_icon.png";
 import call from "./images/icon_call.png";
 import instagram from "./images/instagram_icon.png";
-
 import "./navbar.css";
 
 const pages = [
   { name: "Каталог кроватей", link: "/", id: 1 },
-  { name: "Компания", link: "/products", id: 2 },
-  { name: "Блог", link: "/admin", id: 3 },
-  { name: "Контакты", link: "/comp", id: 4 },
+  { name: "Компания", link: "/company", id: 2 },
+  { name: "Блог", link: "/products", id: 3 },
+  { name: "Контакты", link: "/contactUs", id: 4 },
   { name: "", link: "/*", id: 5 },
+  { name: "Admin Page", link: "/admin", id: 6 },
 ];
 
 const style = {
@@ -33,7 +33,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: 350,
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
@@ -112,7 +112,11 @@ function Navbar() {
               }}
             >
               {pages.map((page, index) => (
-                <Link key={index} to={page.link}>
+                <Link
+                  style={{ textDecoration: "none" }}
+                  key={index}
+                  to={page.link}
+                >
                   <MenuItem onClick={handleCloseNavMenu}>
                     <Typography id="page_adapt_link" textAlign="center">
                       {page.name}
@@ -148,7 +152,11 @@ function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page, index) => (
-              <Link key={index} to={page.link}>
+              <Link
+                style={{ textDecoration: "none" }}
+                key={index}
+                to={page.link}
+              >
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, display: "block" }}
@@ -176,11 +184,12 @@ function Navbar() {
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
           >
-            <Box sx={style}>
-              <Typography id="modal-modal-title" variant="h6" component="h2">
-                Связаться с нами
-              </Typography>
+            <Box
+              sx={style}
+              style={{ display: "flex", backgroundColor: "#fef9ef" }}
+            >
               <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                <h3>Связаться с нами</h3>
                 WhatsUp: 05489065786
                 <br />
                 Telegram: 05489065786

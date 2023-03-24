@@ -1,7 +1,6 @@
-import { Grid } from "@mui/material";
 import React from "react";
-
-import ProductList from "../../components/product/ProductList";
+import ProductList from "../../components/product/ProductList/ProductList";
+import { Grid } from "@mui/material";
 import SideBar from "../../components/product/SideBar";
 
 const ProductsPage = () => {

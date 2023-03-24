@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Company from "../components/Company/Company";
+import ProductCard from "../components/product/ProductCard";
 import AdminPage from "../pages/AdminPage/AdminPage";
-
 import EditProductPage from "../pages/EditProductPage/EditProductPage";
 import HomePage from "../pages/HomePage/HomePage";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
@@ -15,9 +15,7 @@ const MainRoutes = () => {
     { link: "/admin", element: <AdminPage />, id: 3 },
     { link: "/*", element: <NotFoundPage />, id: 4 },
     { link: "/edit/:id", element: <EditProductPage />, id: 5 },
-
     { link: "/company", element: <Company />, id: 6 },
-
   ];
   return (
     <>

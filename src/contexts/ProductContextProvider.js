@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { createContext, useContext, useReducer } from "react";
 import { API } from "../helpers/consts";
 
-
 export const productContext = createContext();
 
 export const useProducts = () => {
@@ -37,7 +36,6 @@ const ProductContextProvider = ({ children }) => {
 
     dispatch({ type: "GET_PRODUCTS", payload: data });
   };
-  console.log(state);
 
   // ! create (post request)
   const addProduct = async (newProduct) => {

@@ -3,6 +3,7 @@ import React, { createContext, useContext, useReducer } from "react";
 import { API } from "../helpers/consts";
 
 export const productContext = createContext();
+
 export const useProducts = () => {
   return useContext(productContext);
 };
@@ -53,8 +54,15 @@ const ProductContextProvider = ({ children }) => {
     const { data } = await axios.get(`${API}/${id}`);
     dispatch({ type: "GET_PRODUCT_DETAILS", payload: data });
   };
+  //! save changes (path request)
+
+  const saveEditProduct = async (editedProduct) => {
+    await axios.patch(`${API}/${editedProduct.id}`, editedProduct);
+    getProducts();
+  };
 
   const values = {
+    saveEditProduct,
     addProduct,
     getProducts,
     products: state.products,

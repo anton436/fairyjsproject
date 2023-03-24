@@ -4,6 +4,7 @@
 }
 
 .admin_btn:hover {
-  background-color: #bea787 !important;
+  background-color: #5a4831 !important;
   color: black;
+  border: none !important;
 }

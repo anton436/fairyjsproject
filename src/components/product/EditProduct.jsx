@@ -5,7 +5,7 @@ import "./Product.css";
 import { useNavigate, useParams } from "react-router";
 
 const EditProduct = () => {
-  const { getProductDetails, productDetails } = useProducts();
+  const { getProductDetails, productDetails, saveEditProduct } = useProducts();
   const navigate = useNavigate();
   const [product, setProduct] = useState(productDetails);
 
@@ -53,6 +53,7 @@ const EditProduct = () => {
         name="name"
         size="small"
         onChange={handleInp}
+        value={product.name || ""}
       />
       <TextField
         className="admin_inp"
@@ -62,6 +63,7 @@ const EditProduct = () => {
         name="description"
         size="small"
         onChange={handleInp}
+        value={product.description || ""}
       />
       <TextField
         className="admin_inp"
@@ -71,6 +73,7 @@ const EditProduct = () => {
         name="price"
         size="small"
         onChange={handleInp}
+        value={product.price || ""}
       />
       <TextField
         className="admin_inp"
@@ -80,6 +83,7 @@ const EditProduct = () => {
         name="picture"
         size="small"
         onChange={handleInp}
+        value={product.picture || ""}
       />
       <TextField
         className="admin_inp"
@@ -89,10 +93,12 @@ const EditProduct = () => {
         name="type"
         size="small"
         onChange={handleInp}
+        value={product.type || ""}
       />
       <Button
         className="admin_btn"
         onClick={() => {
+          saveEditProduct(product);
           navigate("/products");
         }}
         size="large"

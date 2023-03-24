@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.headerGallery {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.cardBodyGallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cardImageGallery {
+  padding-left: 18px;
+  padding-bottom: 18px;
+}
+.headerGalleryBtn {
+  display: flex;
+  justify-content: space-between;
+}
+#btnGallery1 {
+  margin-right: 34%;
+}
+#btnGallery2 {
+  margin-left: 40%;
+}

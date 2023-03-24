@@ -18,15 +18,13 @@ const reducer = (state = INIT_STATE, action) => {
     case "GET_PRODUCTS":
       return { ...state, products: action.payload };
 
-
-    case "GET_PRODUCT+DETAILS":
+    case "GET_PRODUCT_DETAILS":
       return { ...state, productDetails: action.payload };
 
     default:
       return state;
   }
 };
-
 
 const ProductContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
@@ -58,7 +56,15 @@ const ProductContextProvider = ({ children }) => {
     dispatch({ type: "GET_PRODUCT_DETAILS", payload: data });
   };
 
+  //! saveChanges (patch request)
+
+  const saveEditedProduct = async (editedProduct) => {
+    await axios.patch(`${API}/${editedProduct.id}`, editedProduct);
+    getProducts();
+  };
+
   const values = {
+    saveEditedProduct,
     addProduct,
     getProducts,
     products: state.products,
@@ -66,8 +72,6 @@ const ProductContextProvider = ({ children }) => {
     getProductDetails,
     productDetails: state.productDetails,
   };
-
-
 
   return (
     <productContext.Provider value={values}>{children}</productContext.Provider>

@@ -53,32 +53,13 @@
       "description": "some desctiption",
       "price": 222222222222,
       "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtp4qBahxnmeIiVC6b4BByEvTI2Jnr6WhkTg&usqp=CAU",
-      "type": "Phone",
-      "id": 8
-    },
-    {
-      "name": "aaa",
+
+      "name": "AAAAaAA",
       "description": "some desctiption",
-      "price": 222222222222,
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtp4qBahxnmeIiVC6b4BByEvTI2Jnr6WhkTg&usqp=CAU",
-      "type": "Phone",
-      "id": 9
-    },
-    {
-      "name": "aaa",
-      "description": "some desctiption",
-      "price": 222222222222,
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtp4qBahxnmeIiVC6b4BByEvTI2Jnr6WhkTg&usqp=CAU",
+      "price": 8888,
+      "picture": "sadsad",
       "type": "Phone",
       "id": 10
-    },
-    {
-      "name": "aaa",
-      "description": "some desctiption",
-      "price": 222222222222,
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtp4qBahxnmeIiVC6b4BByEvTI2Jnr6WhkTg&usqp=CAU",
-      "type": "Phone",
-      "id": 11
     }
   ]
 }

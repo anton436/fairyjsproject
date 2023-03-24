@@ -5,7 +5,7 @@ import "./Product.css";
 import { useNavigate, useParams } from "react-router";
 
 const EditProduct = () => {
-  const { getProductDetails, productDetails, saveEditProduct } = useProducts();
+  const { getProductDetails, productDetails } = useProducts();
   const navigate = useNavigate();
   const [product, setProduct] = useState(productDetails);
 
@@ -17,6 +17,8 @@ const EditProduct = () => {
   useEffect(() => {
     getProductDetails(id);
   }, []);
+
+  console.log(product);
 
   const handleInp = (e) => {
     if (e.target.name == "price") {
@@ -98,7 +100,6 @@ const EditProduct = () => {
       <Button
         className="admin_btn"
         onClick={() => {
-          saveEditProduct(product);
           navigate("/products");
         }}
         size="large"

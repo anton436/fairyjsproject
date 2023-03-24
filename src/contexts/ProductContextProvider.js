@@ -54,15 +54,16 @@ const ProductContextProvider = ({ children }) => {
     const { data } = await axios.get(`${API}/${id}`);
     dispatch({ type: "GET_PRODUCT_DETAILS", payload: data });
   };
-  //! save changes (path request)
 
-  const saveEditProduct = async (editedProduct) => {
+  // ! save changes (patch request)
+
+  const saveEditedProduct = async (editedProduct) => {
     await axios.patch(`${API}/${editedProduct.id}`, editedProduct);
     getProducts();
   };
 
   const values = {
-    saveEditProduct,
+    saveEditedProduct,
     addProduct,
     getProducts,
     products: state.products,

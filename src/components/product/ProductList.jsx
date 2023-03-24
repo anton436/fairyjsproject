@@ -13,7 +13,7 @@ const ProductList = () => {
     getProducts();
   }, []);
 
-  // ! pagination
+
   const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {
     setPage(value);

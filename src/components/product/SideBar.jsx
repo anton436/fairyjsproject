@@ -1,3 +1,4 @@
+
 import {
   FormControl,
   FormControlLabel,
@@ -10,9 +11,10 @@ import {
 } from "@mui/material";
 import React from "react";
 
+
 const SideBar = () => {
   return (
-    <Grid item md={4}>
+    
       <Paper elevation={1} sx={{ width: "200px", boxShadow: "none" }}>
         <TextField
           id="standard-basic"
@@ -29,6 +31,7 @@ const SideBar = () => {
               defaultValue="all"
               name="radio-buttons-group"
             >
+
               <FormControlLabel value="sofa" control={<Radio />} label="sofa" />
               <FormControlLabel value="bed" control={<Radio />} label="bed" />
               <FormControlLabel

@@ -19,6 +19,8 @@ const EditProduct = () => {
     getProductDetails(id);
   }, []);
 
+  console.log(product);
+
   const handleInp = (e) => {
     if (e.target.name == "price") {
       let obj = {

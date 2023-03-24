@@ -7,6 +7,7 @@ import { useProducts } from "../../contexts/ProductContextProvider";
 import "./Product.css";
 
 
+
 const AddProduct = () => {
   const navigate = useNavigate();
   const [product, setProduct] = useState({
@@ -16,6 +17,8 @@ const AddProduct = () => {
     picture: '',
     type: '',
   });
+  const { addProduct } = useProducts();
+
   const { addProduct } = useProducts();
 
   const handleInp = (e) => {
@@ -117,7 +120,7 @@ const AddProduct = () => {
           backgroundColor: 'black',
           fontFamily: 'Montserrat, sans-serif',
         }}
-      >
+
         Add product
       </Button>
     </Box>

@@ -1,28 +1,14 @@
 {
   "products": [
     {
-      "name": "qdqw",
-      "description": "wdqdq",
-      "price": 23,
-      "picture": "ewcw",
-      "type": "wece",
-      "id": 1
-    },
-    {
+
       "name": "aaa",
-      "description": "some descr",
-      "price": 1299,
-      "picture": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMQAAAEBCAMAAAAQKvrqAAAB6VBMVEX///8AdbgAAAD23AmSaC759waHsePS0tIAdrtwcHAAd7r8/Pz33An39/cEAADW1tby8vIAcLIAZaPHx8cAW5Smpqbm5ubNzc2YmJgAc7js7Oyurq4ATXp7e3vi4uLvuM8Aa6sAVIq6ublERET/8/ebm5sAT4MIXJFXVlaLi4tramp4eHisq6zy2QsAP2cARXHx7wxiYWFQUFAMNVcAVI8sLCw4ODgFHTAISXAAZKQAPGYAM1kIVIMLLEkjPlZoZxQTO0qBgQ+5phPjzBBJQhJukruNfgAVFRXKtADn0A6NgBnJnK/jrcQIK0K5tQAEER0mHxciIiJ+WSUNIzopQ10lU3Q7SltZY3E7U20cQmEqOUUAJkhOVF9tekI+RitVa34mNzYAQ3g7U02TliTl4gp7fCBPWjaopxPU0g7FwhFXWhgAOlMALF1vbxU+QBtOUhxEVEFVVhAiIQcrKggjLUEAABd2aRJVVEhjfZ5GQyqvnhIzMBl8bxMwMSVnhapIX4NraFNeWTFaYVWJg2t1bjFjXkZqXwFXSxdvakQvTFxoTlqdd4ZMPEGqg5KBa3WThzF9X2x1fi9acFE9Wlxte0CMiXZGX1BbZjdROiA8KQ5oSiNZRzY7JgBANSwvIhcAES9vWERhSC1IMAA0TgLJAAAgAElEQVR4nO1di3vaVpY3dlKEMAY9AAESESIgxEOyoNjEBmcDKcY4xHWcODH1zrS1U7vtttu0GaclzLSZcZM2ibOdnccm6aSznb9075UECJDsxDbB+30535c4LQbuT+d97znnjoy8oTf0ht7QG3pDb+gN/X8ku98+7CUcmezJetIx7EUckezJHHnV7R/2Mo5ErmSORXExQRgww/7/hEFB4RqLWBA2uipwnm7V8BOU2zWkZb0KuQLX8xhqsVgQH05flYWk1eOwQw64gpwg35Cue4a9wgPJzs",
+      "description": "some desctiption",
+      "price": 22,
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtp4qBahxnmeIiVC6b4BByEvTI2Jnr6WhkTg&usqp=CAU",
       "type": "Phone",
-      "id": 2
-    },
-    {
-      "name": "ad",
-      "description": "qwe",
-      "price": null,
-      "picture": "asd",
-      "type": "zxc",
-      "id": 3
+      "id": 1
+
     }
   ]
 }

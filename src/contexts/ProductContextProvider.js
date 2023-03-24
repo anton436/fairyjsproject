@@ -3,6 +3,7 @@ import React, { createContext, useContext, useReducer } from "react";
 import { API } from "../helpers/consts";
 
 export const productContext = createContext();
+
 export const useProducts = () => {
   return useContext(productContext);
 };
@@ -65,6 +66,8 @@ const ProductContextProvider = ({ children }) => {
     getProductDetails,
     productDetails: state.productDetails,
   };
+
+
 
   return (
     <productContext.Provider value={values}>{children}</productContext.Provider>

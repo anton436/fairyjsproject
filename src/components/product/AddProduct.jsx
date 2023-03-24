@@ -1,4 +1,3 @@
-
 import { Box, Button, TextField } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -6,23 +5,20 @@ import { useNavigate } from "react-router-dom";
 import { useProducts } from "../../contexts/ProductContextProvider";
 import "./Product.css";
 
-
-
 const AddProduct = () => {
   const navigate = useNavigate();
   const [product, setProduct] = useState({
-    name: '',
-    description: '',
+    name: "",
+    description: "",
     price: 0,
-    picture: '',
-    type: '',
+    picture: "",
+    type: "",
   });
-  const { addProduct } = useProducts();
 
   const { addProduct } = useProducts();
 
   const handleInp = (e) => {
-    if (e.target.name == 'price') {
+    if (e.target.name == "price") {
       let obj = {
         ...product,
         [e.target.name]: Number(e.target.value),
@@ -40,15 +36,15 @@ const AddProduct = () => {
   return (
     <Box
       sx={{
-        width: '40vw',
-        margin: '5vh auto',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'column',
-        background:'rgb(254, 249, 239)',
-        gap: '30px',
-        padding: '20px'
+        width: "40vw",
+        margin: "5vh auto",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+        background: "rgb(254, 249, 239)",
+        gap: "30px",
+        padding: "20px",
       }}
     >
       <h1 className="admin_header" align="center">
@@ -105,7 +101,6 @@ const AddProduct = () => {
         onChange={handleInp}
       />
       <Button
-
         className="admin_btn"
         onClick={() => {
           addProduct(product);
@@ -113,14 +108,13 @@ const AddProduct = () => {
         }}
         size="large"
         variant="outlined"
-
         sx={{
-          border: '1px solid black',
-          color: 'white',
-          backgroundColor: 'black',
-          fontFamily: 'Montserrat, sans-serif',
+          border: "1px solid black",
+          color: "white",
+          backgroundColor: "black",
+          fontFamily: "Montserrat, sans-serif",
         }}
-
+      >
         Add product
       </Button>
     </Box>

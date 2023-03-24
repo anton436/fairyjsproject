@@ -1,64 +1,59 @@
 {
   "products": [
     {
-      "name": "aaa",
-      "description": "some desctiption sddddd sddddddddddddddd sddddddddddddd dss  sdd sdddddddddd sddddddddd ",
-      "price": 222222222222,
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtp4qBahxnmeIiVC6b4BByEvTI2Jnr6WhkTg&usqp=CAU",
-      "type": "Phone",
+      "name": "Акция на угловые диваны",
+      "description": "Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение направлений прогрессивного развития.  ",
+      "price": 299,
+      "picture": "https://i.pinimg.com/236x/20/af/e3/20afe3b190d082b0ac2f157292c89add.jpg",
+      "type": "Sofa",
       "id": 2
     },
     {
-      "name": "aaa",
-      "description": "some desctiption",
-      "price": 222222222222,
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtp4qBahxnmeIiVC6b4BByEvTI2Jnr6WhkTg&usqp=CAU",
-      "type": "Phone",
+      "name": "Акция на угловые диваны",
+      "description": "Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение направлений прогрессивного развития.  ",
+      "price": 420,
+      "picture": "https://i.pinimg.com/236x/d5/5b/36/d55b36a6bf20d2ed4a524ed5c4518743.jpg",
+      "type": "Sofa",
       "id": 3
     },
     {
-      "name": "aaa",
-      "description": "some desctiption",
-      "price": 222222222222,
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtp4qBahxnmeIiVC6b4BByEvTI2Jnr6WhkTg&usqp=CAU",
-      "type": "Phone",
+      "name": "Акция на угловые диваны",
+      "description": "Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение направлений прогрессивного развития.  ",
+      "price": 370,
+      "picture": "https://i.pinimg.com/236x/43/75/f3/4375f38a1272a17d36cc5b4d90a7e865.jpg",
+      "type": "Sofa",
       "id": 4
     },
     {
-      "name": "aaa",
-      "description": "some desctiption",
-      "price": 222222222222,
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtp4qBahxnmeIiVC6b4BByEvTI2Jnr6WhkTg&usqp=CAU",
-      "type": "Phone",
+      "name": "Акция на угловые диваны",
+      "description": "Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение направлений прогрессивного развития.  ",
+      "price": 282,
+      "picture": "https://i.pinimg.com/236x/f2/69/5a/f2695a0e15505a4865cf6a96432bc38e.jpg",
+      "type": "Sofa",
       "id": 5
     },
     {
-      "name": "aaa",
-      "description": "some desctiption",
-      "price": 222222222222,
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtp4qBahxnmeIiVC6b4BByEvTI2Jnr6WhkTg&usqp=CAU",
-      "type": "Phone",
+      "name": "Акция на угловые диваны",
+      "description": "Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение направлений прогрессивного развития.  ",
+      "price": 510,
+      "picture": "https://i.pinimg.com/236x/65/53/d1/6553d18c53f463edcd25b61cdf09f286.jpg",
+      "type": "Sofa",
       "id": 6
     },
     {
-      "name": "aaa",
-      "description": "some desctiption",
-      "price": 222222222222,
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtp4qBahxnmeIiVC6b4BByEvTI2Jnr6WhkTg&usqp=CAU",
-      "type": "Phone",
+      "name": "Акция на угловые диваны",
+      "description": "Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение направлений прогрессивного развития.  ",
+      "price": 320,
+      "picture": "https://i.pinimg.com/236x/dd/6c/f0/dd6cf0c4f83aef5c4fff02e8484d66d9.jpg",
+      "type": "Sofa",
       "id": 7
     },
     {
-      "name": "aaa",
-      "description": "some desctiption",
-      "price": 222222222222,
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtp4qBahxnmeIiVC6b4BByEvTI2Jnr6WhkTg&usqp=CAU",
-
-      "name": "AAAAaAA",
-      "description": "some desctiption",
-      "price": 8888,
-      "picture": "sadsad",
-      "type": "Phone",
+      "name": "Акция на угловые диваны",
+      "description": "Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение направлений прогрессивного развития.  ",
+      "price": 140,
+      "picture": "https://i.pinimg.com/236x/fb/04/5d/fb045d6c4b9351208fcf9e01f1dc502c.jpg",
+      "type": "Sofa",
       "id": 10
     }
   ]

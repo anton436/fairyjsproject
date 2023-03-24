@@ -8,6 +8,10 @@ import Typography from "@mui/material/Typography";
 import { useProducts } from "../../contexts/ProductContextProvider";
 import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/system";
+<style>
+  @import
+  url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans:wght@300&display=swap');
+</style>;
 
 export default function ProductCard({ item }) {
   const navigate = useNavigate();
@@ -23,8 +27,8 @@ export default function ProductCard({ item }) {
       <CardMedia
         sx={{
           height: 320,
-          width: "44%",
-          objectFit: "cover",
+          width: "27%",
+          padding: "20px",
         }}
         image={item.picture}
         title="green iguana"
@@ -47,23 +51,30 @@ export default function ProductCard({ item }) {
               fontFamily: "sans-serif",
               fontSize: "36px",
               marginLeft: "30px",
+              fontFamily: "Montserrat",
             }}
           >
             {item.name}
           </Typography>
           <Typography
             variant="body2"
-            sx={{ fontSize: "18px", marginTop: "30px", marginLeft: "30px" }}
+            sx={{
+              fontSize: "18px",
+              marginTop: "30px",
+              marginLeft: "30px",
+              fontFamily: "Open Sans",
+              lineHeight: "27px",
+            }}
           >
             {item.description}
           </Typography>
           <Typography
-            variant="body2"
+            variant="body5"
             sx={{
               fontSize: "24px",
               color: "#000000",
-              marginTop: "35px",
               marginLeft: "30px",
+              color: "#006c73",
             }}
           >
             {item.price} $

@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { createContext, useContext, useReducer } from "react";
 import { API } from "../helpers/consts";
 
-export const productContext = createContext();
+export const productContext = createContext({});
 export const useProducts = () => {
   return useContext(productContext);
 };
@@ -17,15 +17,13 @@ const reducer = (state = INIT_STATE, action) => {
     case "GET_PRODUCTS":
       return { ...state, products: action.payload };
 
-
-    case "GET_PRODUCT+DETAILS":
+    case "GET_PRODUCT_DETAILS":
       return { ...state, productDetails: action.payload };
 
     default:
       return state;
   }
 };
-
 
 const ProductContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
@@ -57,7 +55,14 @@ const ProductContextProvider = ({ children }) => {
     dispatch({ type: "GET_PRODUCT_DETAILS", payload: data });
   };
 
+  //! save changes (path request)
+
+  const saveEditedProduct = async (editedProduct) => {
+    await axios.patch(`${API}/${editedProduct.id}`, editedProduct);
+  };
+
   const values = {
+    saveEditedProduct,
     addProduct,
     getProducts,
     products: state.products,

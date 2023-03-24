@@ -1,20 +1,28 @@
-import { Grid, Paper, TextField } from "@mui/material";
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
+
+import {
+  FormControl,
+  FormControlLabel,
+  FormLabel,
+  Grid,
+  Paper,
+  Radio,
+  RadioGroup,
+  TextField,
+} from "@mui/material";
+import React from "react";
+
 
 const SideBar = () => {
   return (
-    <Grid item md={4}>
-      <Paper elevation={5} sx={{ width: "200px" }}>
+    
+      <Paper elevation={1} sx={{ width: "200px", boxShadow: "none" }}>
         <TextField
           id="standard-basic"
-          label="Standard"
+          label="Search"
           variant="standard"
           fullWidth
         />
+
         <Grid>
           <FormControl>
             <FormLabel id="demo-radio-buttons-group-label">Type</FormLabel>
@@ -23,16 +31,13 @@ const SideBar = () => {
               defaultValue="all"
               name="radio-buttons-group"
             >
+
+              <FormControlLabel value="sofa" control={<Radio />} label="sofa" />
+              <FormControlLabel value="bed" control={<Radio />} label="bed" />
               <FormControlLabel
-                value="sofas"
+                value="pillow"
                 control={<Radio />}
-                label="sofas"
-              />
-              <FormControlLabel value="beds" control={<Radio />} label="beds" />
-              <FormControlLabel
-                value="other"
-                control={<Radio />}
-                label="Other"
+                label="pillow"
               />
             </RadioGroup>
           </FormControl>

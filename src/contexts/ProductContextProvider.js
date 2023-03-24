@@ -2,7 +2,9 @@ import axios from "axios";
 import React, { createContext, useContext, useReducer } from "react";
 import { API } from "../helpers/consts";
 
-export const productContext = createContext({});
+
+export const productContext = createContext();
+
 export const useProducts = () => {
   return useContext(productContext);
 };
@@ -55,10 +57,11 @@ const ProductContextProvider = ({ children }) => {
     dispatch({ type: "GET_PRODUCT_DETAILS", payload: data });
   };
 
-  //! save changes (path request)
+  // ! save changes (patch request)
 
   const saveEditedProduct = async (editedProduct) => {
     await axios.patch(`${API}/${editedProduct.id}`, editedProduct);
+    getProducts();
   };
 
   const values = {

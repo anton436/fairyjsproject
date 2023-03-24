@@ -13,7 +13,7 @@ const ProductList = () => {
     getProducts();
   }, []);
 
-  //!pagination
+
   const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {
     setPage(value);
@@ -27,6 +27,8 @@ const ProductList = () => {
     const end = begin + itemsPerPage;
     return products.slice(begin, end);
   };
+
+  // ! pagination
 
   return (
     <>

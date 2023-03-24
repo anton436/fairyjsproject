@@ -1,12 +1,28 @@
 {
   "products": [
     {
-      "name": "qdqw",
-      "description": "wdqdq",
-      "price": 23,
-      "picture": "ewcw",
-      "type": "wece",
-      "id": 1
+      "name": "Hey",
+      "description": "SayHeyKew",
+      "price": 34,
+      "picture": "https://i.pinimg.com/474x/16/e2/f1/16e2f140e98b6f6a02cd0767482d4578.jpg",
+      "type": "sss",
+      "id": 5
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 34,
+      "picture": "https://i.pinimg.com/474x/a7/e0/0a/a7e00a05a931c3c3fafccbbde80f94a3.jpg",
+      "type": "Fighter",
+      "id": 6
+    },
+    {
+      "name": "Tony",
+      "description": "Retired",
+      "price": 8000,
+      "picture": "https://i.pinimg.com/474x/8a/6f/2b/8a6f2bc3f902b5f5daeeec62d62f35e3.jpg",
+      "type": "Goat",
+      "id": 7
     }
   ]
 }

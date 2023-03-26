@@ -1,0 +1,254 @@
+/* @media all and (max-width: 1441px) {
+  .homePageIcon {
+    margin-left: 1379px;
+  }
+  .homePageIcon1 {
+    left: 1202px;
+  }
+  .header_block_text {
+    margin-left: 1px;
+    margin-right: 60px;
+  }
+  .headerImg2 {
+    width: 520px;
+    margin-left: 80px;
+  }
+  .headerImg3 {
+    width: 802px;
+  }
+  .headerImg1 {
+    width: 718px;
+    margin-left: 0px;
+  }
+  .header_block1 {
+    display: flex;
+    margin-left: 0px;
+  }
+  .homePageHight {
+    height: 600px;
+    width: 100%;
+  }
+  .header_block_text {
+    margin-left: 80px;
+    margin-right: 20px;
+  }
+}
+
+@media all and (max-width: 1025px) {
+  .homePageIcon {
+    margin-left: 963px;
+  }
+  .homePageIcon1 {
+    left: 786px;
+  }
+
+  .headerImg3 {
+    width: 592px;
+  }
+  .header_block1 {
+    display: flex;
+    margin-left: 0px;
+  }
+  .homePageHight {
+    height: 600px;
+    width: 100%;
+  }
+  .headerImg2 {
+    width: 360px;
+    margin-left: 35px;
+  }
+  .headerImg1 {
+    width: 445px;
+    margin-left: 10px;
+  }
+  .header_block_text {
+    margin-left: 40px;
+    margin-right: 0px;
+    width: 520px;
+    line-height: 25px;
+  }
+  .header_title2 {
+    width: 80%;
+    font-size: 18px;
+  }
+  .header_button {
+    margin-left: 190px;
+    margin-top: 110px;
+    margin-bottom: 50px;
+  }
+}
+
+@media all and (max-width: 769px) {
+  .homePageIcon {
+    margin-left: 707px;
+  }
+  .homePageIcon1 {
+    left: 529px;
+  }
+  .header_block1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .headerImg1 {
+    width: 700px;
+    margin-left: 35px;
+  }
+  .headerImg2 {
+    width: 700px;
+    margin-left: 35px;
+  }
+  .headerImg3 {
+    width: 700px;
+    margin-left: 35px;
+    margin-top: 0px;
+  }
+  .header_block_text {
+    margin-left: 35px;
+    width: 700px;
+    line-height: 25px;
+  }
+  .header_button {
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+}
+
+@media all and (max-width: 426px) {
+  .homePageIcon {
+    margin-left: 364px;
+    margin-top: 20px;
+  }
+  .homePageIcon1 {
+    left: 187px;
+  }
+  .header_block1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2px;
+  }
+  .headerImg1 {
+    width: 375px;
+    margin-left: 25px;
+    height: 300px;
+  }
+  .headerImg2 {
+    width: 375px;
+    margin-left: 25px;
+    height: 300px;
+  }
+  .headerImg3 {
+    width: 375px;
+    margin-left: 25px;
+    height: 300px;
+  }
+  .header_block_text {
+    margin-left: 25px;
+    width: 390px;
+    line-height: 20px;
+    margin-top: 0px;
+  }
+  .header_button {
+    margin-left: 205px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+  }
+  .homePageHight {
+    height: 400px;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 376px) {
+  .homePageIcon {
+    margin-left: 315px;
+    margin-top: 20px;
+  }
+  .homePageIcon1 {
+    left: 138px;
+  }
+  .header_block1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2px;
+  }
+  .headerImg1 {
+    width: 326px;
+    margin-left: 22px;
+    height: 300px;
+    margin-top: 190px;
+  }
+  .headerImg2 {
+    width: 326px;
+    margin-left: 22px;
+    height: 300px;
+  }
+  .headerImg3 {
+    width: 326px;
+    margin-left: 22px;
+    height: 300px;
+  }
+  .header_block_text {
+    margin-left: 22px;
+    width: 360px;
+    line-height: 20px;
+    margin-top: 0px;
+  }
+  .header_button {
+    margin-left: 145px;
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+  .homePageHight {
+    height: 400px;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 321px) {
+  .homePageIcon {
+    margin-left: 259px;
+    margin-top: 23px;
+  }
+  .homePageIcon1 {
+    left: 82px;
+  }
+  .header_block1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2px;
+  }
+  .headerImg1 {
+    width: 270px;
+    margin-left: 25px;
+    height: 250px;
+    margin-top: 240px;
+  }
+  .headerImg2 {
+    width: 270px;
+    margin-left: 25px;
+    height: 250px;
+  }
+  .headerImg3 {
+    width: 270px;
+    margin-left: 25px;
+    height: 250px;
+  }
+  .header_block_text {
+    margin-left: 15px;
+    width: 305px;
+    line-height: 20px;
+    margin-top: 0px;
+    font-size: 14px;
+  }
+  .header_button {
+    margin-left: 85px;
+    margin-top: 120px;
+    margin-bottom: 50px;
+    font-size: 20px;
+  }
+  .homePageHight {
+    height: 400px;
+    width: 100%;
+  }
+} */

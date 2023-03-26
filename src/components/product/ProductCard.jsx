@@ -17,13 +17,7 @@ export default function ProductCard({ item }) {
   const navigate = useNavigate();
   const { deleteProduct } = useProducts();
   return (
-    <Card
-      sx={{
-        margin: "1rem",
-        display: "flex",
-        width: "92%",
-      }}
-    >
+    <Card sx={{ maxWidth: 345, margin: "1rem" }}>
       <CardMedia
         sx={{
           height: 320,
@@ -108,6 +102,25 @@ export default function ProductCard({ item }) {
           </Button>
         </CardActions>
       </CardContent>
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {item.name}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {item.description}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {item.price} $
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button onClick={() => deleteProduct(item.id)} size="small">
+          Delete
+        </Button>
+        <Button onClick={() => navigate(`/edit/${item.id}`)} size="small">
+          Edit
+        </Button>
+      </CardActions>
     </Card>
   );
 }

@@ -14,7 +14,7 @@ const AddProduct = () => {
     picture: "",
     type: "",
   });
-
+  
   const { addProduct } = useProducts();
 
   const handleInp = (e) => {

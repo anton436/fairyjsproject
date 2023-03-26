@@ -6,13 +6,13 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useProducts } from "../../contexts/ProductContextProvider";
-import { navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export default function ProductCard({ item, key }) {
-  const { deleteProduct } = useProducts();
+export default function ProductCard({ item }) {
   const navigate = useNavigate();
+  const { deleteProduct } = useProducts();
   return (
-    <Card key={key} sx={{ maxWidth: 345, margin: "1rem" }}>
+    <Card sx={{ maxWidth: 345, margin: "1rem" }}>
       <CardMedia
         sx={{ height: 140 }}
         image={item.picture}

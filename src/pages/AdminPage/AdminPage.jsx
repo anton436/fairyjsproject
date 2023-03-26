@@ -1,16 +1,16 @@
-
 import React from "react";
 import AddProduct from "../../components/product/AddProduct";
 import "./admin.css";
 
-
 const AdminPage = () => {
   return (
-    <div>
-      <h1 className='admin_header' align='center'>
-        ADMIN PAGE
-      </h1>
-
+    <div
+      style={{
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+      className="admin_page"
+    >
       <AddProduct />
     </div>
   );

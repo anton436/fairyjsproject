@@ -1,6 +1,7 @@
 import { Box, Button, TextField } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import { useProducts } from "../../contexts/ProductContextProvider";
 import "./Product.css";
 
@@ -40,13 +41,20 @@ const AddProduct = () => {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
+        background: "rgb(254, 249, 239)",
+        gap: "30px",
+        padding: "20px",
       }}
     >
+      <h1 className="admin_header" align="center">
+        ADMIN PAGE
+      </h1>
       <TextField
         className="admin_inp"
         id="outlined-basic"
         label="Name"
         variant="outlined"
+        color="grey"
         name="name"
         size="small"
         onChange={handleInp}
@@ -56,6 +64,7 @@ const AddProduct = () => {
         id="outlined-basic"
         label="Descripton"
         variant="outlined"
+        color="grey"
         name="description"
         size="small"
         onChange={handleInp}
@@ -65,6 +74,7 @@ const AddProduct = () => {
         id="outlined-basic"
         label="Price"
         variant="outlined"
+        color="grey"
         name="price"
         size="small"
         onChange={handleInp}
@@ -74,6 +84,7 @@ const AddProduct = () => {
         id="outlined-basic"
         label="Picture"
         variant="outlined"
+        color="grey"
         name="picture"
         size="small"
         onChange={handleInp}
@@ -83,6 +94,7 @@ const AddProduct = () => {
         id="outlined-basic"
         label="Type"
         variant="outlined"
+        color="grey"
         name="type"
         size="small"
         onChange={handleInp}

@@ -1,24 +1,23 @@
 import { Box, Button, TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
 import { useProducts } from "../../contexts/ProductContextProvider";
 import "./Product.css";
+import { useNavigate, useParams } from "react-router";
 
 const EditProduct = () => {
+  const { getProductDetails, productDetails, saveEditedProduct } =
+    useProducts();
   const navigate = useNavigate();
-  const { getProductDetails, productDetails } = useProducts();
   const [product, setProduct] = useState(productDetails);
 
-  console.log(product);
   const { id } = useParams();
+  useEffect(() => {
+    setProduct(productDetails);
+  }, [productDetails]);
 
   useEffect(() => {
     getProductDetails(id);
   }, []);
-
-  useEffect(() => {
-    setProduct(productDetails);
-  }, [productDetails]);
 
   const handleInp = (e) => {
     if (e.target.name == "price") {
@@ -55,6 +54,7 @@ const EditProduct = () => {
         name="name"
         size="small"
         onChange={handleInp}
+        value={product.name || ""}
       />
       <TextField
         className="admin_inp"
@@ -64,6 +64,7 @@ const EditProduct = () => {
         name="description"
         size="small"
         onChange={handleInp}
+        value={product.description || ""}
       />
       <TextField
         className="admin_inp"
@@ -73,6 +74,7 @@ const EditProduct = () => {
         name="price"
         size="small"
         onChange={handleInp}
+        value={product.price || ""}
       />
       <TextField
         className="admin_inp"
@@ -82,6 +84,7 @@ const EditProduct = () => {
         name="picture"
         size="small"
         onChange={handleInp}
+        value={product.picture || ""}
       />
       <TextField
         className="admin_inp"
@@ -91,11 +94,12 @@ const EditProduct = () => {
         name="type"
         size="small"
         onChange={handleInp}
+        value={product.type || ""}
       />
       <Button
         className="admin_btn"
         onClick={() => {
-          getProductDetails(id);
+          saveEditedProduct(product);
           navigate("/products");
         }}
         size="large"
@@ -107,7 +111,7 @@ const EditProduct = () => {
           fontFamily: "Montserrat, sans-serif",
         }}
       >
-        Save changes
+        save changes
       </Button>
     </Box>
   );

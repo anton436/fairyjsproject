@@ -14,7 +14,7 @@ import { useProducts } from "../../contexts/ProductContextProvider";
 const SideBar = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("q") || "");
-  const { fetchByParams } = useProducts();
+  const { fetchByParams, getProducts } = useProducts();
   useEffect(() => {
     setSearchParams({ q: search });
     getProducts();

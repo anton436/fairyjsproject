@@ -9,7 +9,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
   margin-left: 120px;
   margin-top: 66px;
+}
+@media all and (max-width: 1024px) {
+  #list_card {
+    margin-left: 50px;
+    margin-top: 36px;
+  }
+  #product_list_title {
+    margin-left: 70px;
+  }
 }

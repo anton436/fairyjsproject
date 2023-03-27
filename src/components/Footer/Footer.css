@@ -1,0 +1,49 @@
+.green {
+  color: green;
+  margin-bottom: 10%;
+}
+
+.black {
+  color: black;
+}
+*/ * {
+  font-family: "Montserrat", sans-serif;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+}
+.footer_map {
+  width: 25vw;
+  height: 100%;
+}
+.footer_logo {
+  margin: 4% 25%;
+}
+
+.footer_end {
+  margin: 0% 14%;
+  width: max-content;
+  padding-top: 64%;
+}
+.footer_list_text {
+  margin-bottom: 10%;
+}
+.footer_icons {
+  margin-top: 44px;
+}
+
+.footer_end {
+  color: #646464;
+}
+
+.footer_icons_instagram,
+.footer_icons_facebook {
+  width: 24px;
+  height: 24px;
+}
+
+.footer_icons_instagram {
+  margin-left: 13px;
+}

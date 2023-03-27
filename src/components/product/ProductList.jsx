@@ -5,13 +5,20 @@ import ProductCard from "./ProductCard";
 import Typography from "@mui/material/Typography";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
+import { useSearchParams } from "react-router-dom";
 
 const ProductList = () => {
   const { getProducts, products } = useProducts();
+  const [searchParams] = useSearchParams();
+  console.log(searchParams);
 
   useEffect(() => {
     getProducts();
   }, []);
+
+  useEffect(() => {
+    getProducts();
+  }, [searchParams]);
 
   const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {

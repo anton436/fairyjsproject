@@ -59,7 +59,7 @@ const Catalog = () => {
 
           <div className="card">
             <img src={pic3} alt="" />
-            <disv className="cardBottom">
+            <div className="cardBottom">
               <span>
                 <h2>Кровать Рим 1600</h2>
                 <h3>19 940 грн</h3>
@@ -67,7 +67,7 @@ const Catalog = () => {
               <button>
                 <img src={compareImg} alt="" />
               </button>
-            </disv>
+            </div>
           </div>
           <div className="card">
             <img src={pic4} alt="" />

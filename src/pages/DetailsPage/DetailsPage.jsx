@@ -40,7 +40,7 @@ const DetailsPage = () => {
           <img src={imgOfDetails} alt="" />
         </span>
         <span style={{ marginRight: "14px", color: "#006C73" }}>
-          Акция на уговые диваны
+          Акция на угловые диваны
         </span>
         <Box style={{ marginTop: "8%" }}>
           <img style={{ marginBottom: "2%" }} src={imgOfDetailsLine} alt="" />
@@ -53,7 +53,7 @@ const DetailsPage = () => {
               lineHeight: "59px",
             }}
           >
-            Акция на уговые диваны
+            {product.name}
           </h1>
         </Box>
       </Box>
@@ -62,7 +62,7 @@ const DetailsPage = () => {
           marginLeft: "4.17%",
           width: " 63%",
 
-          height: "65%",
+          maxHeight: 1500,
           objectFit: "cover",
           marginTop: "7%",
         }}

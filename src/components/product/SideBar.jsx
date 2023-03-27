@@ -33,55 +33,54 @@ const SideBar = () => {
           onChange={(e) => setSearch(e.target.value)}
           value={search}
         />
+
+        <Grid>
+          <FormControl>
+            <FormLabel id="demo-radio-buttons-group-label">Type</FormLabel>
+            <RadioGroup
+              aria-labelledby="demo-radio-buttons-group-label"
+              defaultValue="all"
+              name="radio-buttons-group"
+              onChange={(e) => fetchByParams("type", e.target.value)}
+            >
+              <FormControlLabel value="all" control={<Radio />} label="All" />
+              <FormControlLabel value="Sofa" control={<Radio />} label="sofa" />
+              <FormControlLabel value="Bed" control={<Radio />} label="bed" />
+              <FormControlLabel
+                value="Pillow"
+                control={<Radio />}
+                label="pillow"
+              />
+            </RadioGroup>
+          </FormControl>
+        </Grid>
+        <Grid>
+          <FormControl>
+            <FormLabel id="demo-radio-buttons-group-label">Price</FormLabel>
+            <RadioGroup
+              aria-labelledby="demo-radio-buttons-group-label"
+              defaultValue="all"
+              name="radio-buttons-group"
+            >
+              <FormControlLabel
+                value="200"
+                control={<Radio />}
+                label="less than 200$"
+              />
+              <FormControlLabel
+                value="500"
+                control={<Radio />}
+                label="less than 500$"
+              />
+              <FormControlLabel
+                value="1000"
+                control={<Radio />}
+                label="less than 1000$"
+              />
+            </RadioGroup>
+          </FormControl>
+        </Grid>
       </Paper>
-
-      <Grid>
-        <FormControl>
-          <FormLabel id="demo-radio-buttons-group-label">Type</FormLabel>
-          <RadioGroup
-            onChange={(e) => fetchByParams("type", e.target.value)}
-            aria-labelledby="demo-radio-buttons-group-label"
-            defaultValue="all"
-            name="radio-buttons-group"
-          >
-            <FormControlLabel value="all" control={<Radio />} label="All" />
-
-            <FormControlLabel value="Sofa" control={<Radio />} label="Sofa" />
-            <FormControlLabel value="Bed" control={<Radio />} label="Bed" />
-            <FormControlLabel
-              value="Pillow"
-              control={<Radio />}
-              label="pillow"
-            />
-          </RadioGroup>
-        </FormControl>
-      </Grid>
-      <Grid>
-        <FormControl>
-          <FormLabel id="demo-radio-buttons-group-label">Price</FormLabel>
-          <RadioGroup
-            aria-labelledby="demo-radio-buttons-group-label"
-            defaultValue="all"
-            name="radio-buttons-group"
-          >
-            <FormControlLabel
-              value="200"
-              control={<Radio />}
-              label="Less than 200$"
-            />
-            <FormControlLabel
-              value="500"
-              control={<Radio />}
-              label="Less than 500$"
-            />
-            <FormControlLabel
-              value="1000"
-              control={<Radio />}
-              label="Less than 1000$"
-            />
-          </RadioGroup>
-        </FormControl>
-      </Grid>
     </Grid>
   );
 };

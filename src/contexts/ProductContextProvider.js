@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { createContext, useContext, useReducer } from "react";
-import { useNavigate } from "react-router";
+
+import { useNavigate } from "react-router-dom";
 
 import { API } from "../helpers/consts";
 
@@ -13,6 +14,7 @@ export const useProducts = () => {
 const INIT_STATE = {
   products: [],
   productDetails: {},
+  randomProducts: [],
 };
 
 const reducer = (state = INIT_STATE, action) => {
@@ -22,6 +24,8 @@ const reducer = (state = INIT_STATE, action) => {
 
     case "GET_PRODUCT_DETAILS":
       return { ...state, productDetails: action.payload };
+    case "GET_RANDOM_PRODUCTS":
+      return { ...state, randomProducts: action.payload };
 
     default:
       return state;
@@ -30,14 +34,19 @@ const reducer = (state = INIT_STATE, action) => {
 
 const ProductContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
   //! read (get request)
 
   const getProducts = async () => {
     const { data } = await axios.get(`${API}${window.location.search}`);
 
     dispatch({ type: "GET_PRODUCTS", payload: data });
+  };
+  const getRandomProducts = async () => {
+    const { data } = await axios.get(API + "?_limit=3");
+
+    dispatch({ type: "GET_RANDOM_PRODUCTS", payload: data });
   };
 
   // ! create (post request)
@@ -73,6 +82,7 @@ const ProductContextProvider = ({ children }) => {
       search.set(query, value);
     }
     const url = `${window.location.pathname}? ${search.toString()}`;
+
     navigate(url);
   };
 
@@ -85,6 +95,9 @@ const ProductContextProvider = ({ children }) => {
     deleteProduct,
     getProductDetails,
     productDetails: state.productDetails,
+    getRandomProducts,
+    randomProducts: state.randomProducts,
+    fetchByParams,
   };
 
   return (

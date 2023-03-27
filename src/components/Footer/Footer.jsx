@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Footer.css";
-import "../Footer/adaptive.css";
+import "./adaptive.css";
 import instaLogo from "../Footer/images/instagram_icon.png";
 import faceBookLogo from "../Footer/images/facebook (1) 3.png";
 import footerLogo from "../Footer/images/logo_Footer.png";

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   FormControl,
   FormControlLabel,
@@ -9,8 +9,21 @@ import {
   RadioGroup,
   TextField,
 } from "@mui/material";
+import { useSearchParams } from "react-router-dom";
+import { useProducts } from "../../contexts/ProductContextProvider";
 
 const SideBar = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [search, setSearch] = useState(searchParams.get("q") || "");
+  const { getProducts, fetchByParams } = useProducts();
+  useEffect(() => {
+    setSearchParams({
+      q: search,
+    });
+    getProducts();
+  }, [search]);
+
+  console.log(window.location);
   return (
     <Grid item md={4}>
       <Paper elevation={1} sx={{ width: "200px", boxShadow: "none" }}>
@@ -19,6 +32,8 @@ const SideBar = () => {
           label="Search"
           variant="standard"
           fullWidth
+          onChange={(e) => setSearch(e.target.value)}
+          value={search}
         />
 
         <Grid>
@@ -28,11 +43,13 @@ const SideBar = () => {
               aria-labelledby="demo-radio-buttons-group-label"
               defaultValue="all"
               name="radio-buttons-group"
+              onChange={(e) => fetchByParams("type", e.target.value)}
             >
-              <FormControlLabel value="sofa" control={<Radio />} label="sofa" />
-              <FormControlLabel value="bed" control={<Radio />} label="bed" />
+              <FormControlLabel value="all" control={<Radio />} label="all" />
+              <FormControlLabel value="Sofa" control={<Radio />} label="sofa" />
+              <FormControlLabel value="Bed" control={<Radio />} label="bed" />
               <FormControlLabel
-                value="pillow"
+                value="Pillow"
                 control={<Radio />}
                 label="pillow"
               />
@@ -66,59 +83,6 @@ const SideBar = () => {
           </FormControl>
         </Grid>
       </Paper>
-      <Paper elevation={5} sx={{ width: "200px", boxShadow: "none", p: 2 }}>
-        <TextField
-          id="standard-basic"
-          label="Search)"
-          variant="standard"
-          fullWidth
-        />
-      </Paper>
-
-      <Grid>
-        <FormControl>
-          <FormLabel id="demo-radio-buttons-group-label">Type</FormLabel>
-          <RadioGroup
-            aria-labelledby="demo-radio-buttons-group-label"
-            defaultValue="all"
-            name="radio-buttons-group"
-          >
-            <FormControlLabel value="sofa" control={<Radio />} label="Sofa" />
-            <FormControlLabel value="bed" control={<Radio />} label="Bed" />
-            <FormControlLabel
-              value="pillow"
-              control={<Radio />}
-              label="Pillow"
-            />
-          </RadioGroup>
-        </FormControl>
-      </Grid>
-      <Grid>
-        <FormControl>
-          <FormLabel id="demo-radio-buttons-group-label">Price</FormLabel>
-          <RadioGroup
-            aria-labelledby="demo-radio-buttons-group-label"
-            defaultValue="all"
-            name="radio-buttons-group"
-          >
-            <FormControlLabel
-              value="200"
-              control={<Radio />}
-              label="Less than 200$"
-            />
-            <FormControlLabel
-              value="500"
-              control={<Radio />}
-              label="Less than 500$"
-            />
-            <FormControlLabel
-              value="1000"
-              control={<Radio />}
-              label="Less than 1000$"
-            />
-          </RadioGroup>
-        </FormControl>
-      </Grid>
     </Grid>
   );
 };

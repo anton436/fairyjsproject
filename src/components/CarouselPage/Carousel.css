@@ -46,7 +46,9 @@
 .CarouselBlock {
   padding-bottom: 70px;
 }
-
+.CarouselBlock * img {
+  object-fit: cover;
+}
 .header_block1 {
   display: flex;
   flex-direction: column;

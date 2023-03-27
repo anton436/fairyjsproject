@@ -7,14 +7,23 @@ import pic3 from "./img/Rectangle3.png";
 import pic4 from "./img/Rectangle4.png";
 import pic5 from "./img/Rectangle4.png";
 import compareImg from "./img/compareImg.svg";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Catalog = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="catalog">
         <div className="catalogHead">
           <h1> Каталог</h1>
-          <p id="catalogH1"> Перейти в каталог</p>
+          <p
+            style={{ cursor: "pointer", fontSize: "24px", color: "black" }}
+            onClick={() => navigate("/products")}
+            id="catalogH1"
+          >
+            {" "}
+            Перейти в каталог
+          </p>
         </div>
         <div className="catalogBody">
           <div className="card">

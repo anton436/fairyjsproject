@@ -22,7 +22,7 @@ const Details3card = () => {
               src={item.picture}
               alt=""
             />
-            <h3 style={{ marginTop: "8%" }}>Акция на угловые диваны</h3>
+            <h3 style={{ marginTop: "8%" }}>{item.name}</h3>
             <Typography sx={{ marginTop: "8%" }}>{item.description}</Typography>
 
             <Box

@@ -32,53 +32,107 @@
       "type": "Sofa",
       "id": 4
     },
+  
+   
     {
-      "name": "Акция на угловые диваны",
-      "description": "Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение направлений прогрессивного развития.  ",
-      "price": 320,
-      "picture": "https://i.pinimg.com/236x/dd/6c/f0/dd6cf0c4f83aef5c4fff02e8484d66d9.jpg",
-      "type": "Sofa",
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "Pillow",
       "id": 5
     },
     {
-      "name": "Акция на угловые диваны",
-      "description": "Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение направлений прогрессивного развития.  ",
-      "price": 420,
-      "picture": "https://i.pinimg.com/236x/d5/5b/36/d55b36a6bf20d2ed4a524ed5c4518743.jpg",
-      "type": "Sofa",
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "Pillow",
       "id": 6
     },
     {
-      "name": "Акция на угловые диваны",
-      "description": "Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение направлений прогрессивного развития.  ",
-      "price": 370,
-      "picture": "https://i.pinimg.com/236x/43/75/f3/4375f38a1272a17d36cc5b4d90a7e865.jpg",
-      "type": "Sofa",
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "Pillow",
       "id": 7
     },
     {
-      "name": "Акция на угловые диваны",
-      "description": "Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение направлений прогрессивного развития.  ",
-      "price": 282,
-      "picture": "https://i.pinimg.com/236x/f2/69/5a/f2695a0e15505a4865cf6a96432bc38e.jpg",
-      "type": "Sofa",
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "Pillow",
       "id": 8
     },
     {
-      "name": "Акция на угловые диваны",
-      "description": "Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение направлений прогрессивного развития.  ",
-      "price": 510,
-      "picture": "https://i.pinimg.com/236x/65/53/d1/6553d18c53f463edcd25b61cdf09f286.jpg",
-      "type": "Sofa",
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "Pillow",
       "id": 9
     },
     {
-      "name": "Акция на угловые диваны",
-      "description": "Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение направлений прогрессивного развития.  ",
-      "price": 320,
-      "picture": "https://i.pinimg.com/236x/dd/6c/f0/dd6cf0c4f83aef5c4fff02e8484d66d9.jpg",
-      "type": "Sofa",
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "Pillow",
       "id": 10
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "Pillow",
+      "id": 11
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "Pillow",
+      "id": 12
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "Pillow",
+      "id": 13
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "Pillow",
+      "id": 14
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "Pillow",
+      "id": 15
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "Pillow",
+      "id": 16
+
+
     }
+    
+   
   ]
 }

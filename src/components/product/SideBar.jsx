@@ -13,6 +13,7 @@ import { useSearchParams } from "react-router-dom";
 import { useProducts } from "../../contexts/ProductContextProvider";
 
 const SideBar = () => {
+
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("q") || "");
   const { getProducts, fetchByParams } = useProducts();

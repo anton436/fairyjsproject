@@ -7,7 +7,7 @@ const ProductsPage = () => {
   return (
     <Grid sx={{ display: "flex" }}>
       <Grid item md={3}>
-        <SideBar />
+        {/* <SideBar /> */}
       </Grid>
       <Grid item md={8}>
         <ProductList />

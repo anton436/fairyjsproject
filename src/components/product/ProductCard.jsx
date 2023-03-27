@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import { useProducts } from "../../contexts/ProductContextProvider";
 import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/system";
+import "./Product.css";
 <style>
   @import
   url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans:wght@300&display=swap');
@@ -18,6 +19,7 @@ export default function ProductCard({ item }) {
   const { deleteProduct } = useProducts();
   return (
     <Card
+      className="cards"
       sx={{
         maxWidth: 1100,
         display: "flex",
@@ -26,6 +28,7 @@ export default function ProductCard({ item }) {
       }}
     >
       <CardMedia
+        className="cards_img"
         sx={{
           height: 320,
           width: "27%",
@@ -36,6 +39,7 @@ export default function ProductCard({ item }) {
       />
 
       <CardContent
+        className="cards_content"
         style={{
           display: "flex",
           flexDirection: "column",
@@ -48,6 +52,7 @@ export default function ProductCard({ item }) {
             gutterBottom
             variant="h5"
             component="div"
+            className="cards_title"
             sx={{
               fontFamily: "sans-serif",
               fontSize: "36px",
@@ -59,6 +64,7 @@ export default function ProductCard({ item }) {
           </Typography>
           <Typography
             variant="body2"
+            className="cards_text"
             sx={{
               fontSize: "18px",
               marginTop: "30px",
@@ -71,6 +77,7 @@ export default function ProductCard({ item }) {
           </Typography>
           <Typography
             variant="body5"
+            className="cards_price"
             sx={{
               fontSize: "24px",
               color: "#000000",
@@ -81,8 +88,10 @@ export default function ProductCard({ item }) {
             {item.price} $
           </Typography>
         </Box>
-        <CardActions sx={{ height: "50px" }}>
+        <CardActions className="btn_control" sx={{ height: "50px" }}>
           <Button
+            className="cards_btn"
+            id="btn_details"
             sx={{
               width: "20%",
               height: "40px",
@@ -96,6 +105,7 @@ export default function ProductCard({ item }) {
             Details
           </Button>
           <Button
+            className="cards_btn"
             sx={{
               width: "20%",
               height: "40px",
@@ -109,6 +119,7 @@ export default function ProductCard({ item }) {
             Delete
           </Button>
           <Button
+            className="cards_btn"
             sx={{
               width: "20%",
               height: "40px",

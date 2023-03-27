@@ -89,6 +89,19 @@ export default function ProductCard({ item }) {
               color: "ffffff",
               marginLeft: "25px",
             }}
+            onClick={() => navigate(`/details/${item.id}`)}
+            size="small, "
+          >
+            Details
+          </Button>
+          <Button
+            sx={{
+              width: "20%",
+              height: "40px",
+              backgroundColor: "#006c73",
+              color: "ffffff",
+              marginLeft: "25px",
+            }}
             onClick={() => deleteProduct(item.id)}
             size="small, "
           >

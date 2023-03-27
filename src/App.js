@@ -1,5 +1,6 @@
 import React from "react";
 import Company from "./components/Company/Company";
+import Footer from "./components/Footer/Footer";
 
 import Navbar from "./components/Navbar/Navbar";
 import ProductContextProvider from "./contexts/ProductContextProvider";
@@ -10,6 +11,7 @@ const App = () => {
     <ProductContextProvider>
       <Navbar />
       <MainRoutes />
+      <Footer />
     </ProductContextProvider>
   );
 };

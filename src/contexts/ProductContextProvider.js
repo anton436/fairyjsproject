@@ -81,8 +81,8 @@ const ProductContextProvider = ({ children }) => {
     } else {
       search.set(query, value);
     }
+    const url = `${window.location.pathname}? ${search.toString()}`;
 
-    const url = `${window.location.pathname}?${search.toString()}`;
     navigate(url);
   };
 

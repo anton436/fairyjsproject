@@ -41,12 +41,116 @@
       "id": 7
     },
     {
-      "name": "Акция на угловые диваны",
-      "description": "Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение направлений прогрессивного развития.  ",
-      "price": 140,
-      "picture": "https://i.pinimg.com/236x/fb/04/5d/fb045d6c4b9351208fcf9e01f1dc502c.jpg",
-      "type": "Sofa",
+      "name": "awewa",
+      "description": "awe",
+      "price": null,
+      "picture": "awe",
+      "type": "awe",
+      "id": 2
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "I lk",
+      "id": 3
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "I lk",
+      "id": 5
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "I lk",
+      "id": 6
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "I lk",
+      "id": 7
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "I lk",
+      "id": 8
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "I lk",
+      "id": 9
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "I lk",
       "id": 10
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "I lk",
+      "id": 11
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "I lk",
+      "id": 12
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "I lk",
+      "id": 13
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "I lk",
+      "id": 14
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "I lk",
+      "id": 15
+    },
+    {
+      "name": "Hello",
+      "description": "Hi",
+      "price": 66,
+      "picture": "Here",
+      "type": "I lk",
+      "id": 16
     }
   ]
 }

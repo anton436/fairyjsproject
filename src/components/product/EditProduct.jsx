@@ -5,7 +5,8 @@ import "./Product.css";
 import { useNavigate, useParams } from "react-router";
 
 const EditProduct = () => {
-  const { getProductDetails, productDetails } = useProducts();
+  const { getProductDetails, productDetails, saveEditedProduct } =
+    useProducts();
   const navigate = useNavigate();
   const [product, setProduct] = useState(productDetails);
 
@@ -100,6 +101,7 @@ const EditProduct = () => {
       <Button
         className="admin_btn"
         onClick={() => {
+          saveEditedProduct(product);
           navigate("/products");
         }}
         size="large"

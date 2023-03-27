@@ -23,8 +23,9 @@
 }
 
 .footer_end {
-  margin: 10% 14%;
+  margin: 0% 14%;
   width: max-content;
+  padding-top: 64%;
 }
 .footer_list_text {
   margin-bottom: 10%;

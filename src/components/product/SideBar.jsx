@@ -46,9 +46,9 @@ const SideBar = () => {
               <FormControlLabel value="Sofa" control={<Radio />} label="sofa" />
               <FormControlLabel value="Bed" control={<Radio />} label="bed" />
               <FormControlLabel
-                value="Pillow"
+                value="Armchair"
                 control={<Radio />}
-                label="pillow"
+                label="armchair"
               />
             </RadioGroup>
           </FormControl>

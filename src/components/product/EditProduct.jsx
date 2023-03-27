@@ -46,8 +46,12 @@ const EditProduct = () => {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
+        background: "rgb(254, 249, 239)",
+        gap: "30px",
+        padding: "20px",
       }}
     >
+      <h1>EDIT PAGE</h1>
       <TextField
         className="admin_inp"
         id="outlined-basic"

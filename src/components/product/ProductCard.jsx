@@ -87,7 +87,7 @@ export default function ProductCard({ item }) {
               width: "20%",
               height: "40px",
               backgroundColor: "#006c73",
-              color: "ffffff",
+              color: "#b7b7a4",
               marginLeft: "25px",
             }}
             onClick={() => navigate(`/details/${item.id}`)}
@@ -100,7 +100,7 @@ export default function ProductCard({ item }) {
               width: "20%",
               height: "40px",
               backgroundColor: "#006c73",
-              color: "ffffff",
+              color: "#b7b7a4",
               marginLeft: "25px",
             }}
             onClick={() => deleteProduct(item.id)}
@@ -113,7 +113,7 @@ export default function ProductCard({ item }) {
               width: "20%",
               height: "40px",
               backgroundColor: "#006c73",
-              color: "ffffff",
+              color: "#b7b7a4",
             }}
             onClick={() => navigate(`/edit/${item.id}`)}
             size="small"

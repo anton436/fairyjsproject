@@ -13,16 +13,15 @@ import { useSearchParams } from "react-router-dom";
 import { useProducts } from "../../contexts/ProductContextProvider";
 
 const SideBar = () => {
-
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("q") || "");
   const { getProducts, fetchByParams } = useProducts();
 
   useEffect(() => {
-    setSearchParams({
-      q: search,
-    });
+    setSearchParams({ q: search });
+    getProducts();
   }, [search]);
+
   return (
     <Grid item md={4}>
       <Paper elevation={1} sx={{ width: "200px", boxShadow: "none" }}>
@@ -34,6 +33,7 @@ const SideBar = () => {
           onChange={(e) => setSearch(e.target.value)}
           value={search}
         />
+
         <Grid>
           <FormControl>
             <FormLabel id="demo-radio-buttons-group-label">Type</FormLabel>

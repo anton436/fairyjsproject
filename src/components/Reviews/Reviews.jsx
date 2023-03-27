@@ -10,13 +10,15 @@ import "./Reviews.css";
 
 const steps = [
   {
-    description: `Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение направлений прогрессивного развития. Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности.`,
-    nameOfCard: "Иван Иванович,",
+    description: `Разнообразный и богатый опыт социально-экономическое развитие позволяет оценить значение соответствующих условий активизации.
+    Равным образом социально-экономическое развитие требует определения и уточнения системы обучения кадров, соответствующей насущным потребностям!
+    Не следует, однако, забывать...`,
+    nameOfCard: "Михаил",
   },
   {
     description:
-      "Partout importe sonnent prelude reciter fer les ouvrent. Comprendre oh remplirent decharnees la la singuliers he tristement. Tot legerement ici paraissait admiration. Notre divin ici leurs somme ans voici tours. Chaclosah cravaches ah sa bourreaux seulement citadelle ii il somptueux. Mats bois vent vlan nos faux pied pic. Sang tous ames or vlan et pris. Senti subit hisse ville qu ne je decor.",
-    nameOfCard: "Иван Иванович,",
+      "Duis aute irure dolor in reprehenderit in voluptate, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quis nostrud exercitation ullamco laboris nisi ut...",
+    nameOfCard: "Павел",
   },
   {
     description:
@@ -28,8 +30,8 @@ const steps = [
 const steps2 = [
   {
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur rem quia possimus eaque ratione asperiores similique voluptas beatae eveniet inventore.",
-    nameOfCard: "John Cenna,",
+      "Мы любим животных и стараемся поддерживать тех из них, кому не посчастливилось иметь ласковых хозяев и тёплый кров. Один из проверенных способов это сделать — помочь благотворительному фонду «Луч Добра». Благодаря их труду ежегодно сотни питомцев находят свой новый дом.",
+    nameOfCard: "John Cenna",
   },
   {
     description:
@@ -38,7 +40,7 @@ const steps2 = [
   },
   {
     description:
-      "Jaja rozsądkiem Kniaziewiez gorącość czarniutkie towarzystwa dnie Herb Jaki. Król nieprzyjaciele najstraszniéj radzi jaką organ progi rostrzygnienie zaraz każe zdala. Ranną Rzeczypospolitéj Najpiękniejszego każdy Prócz kłów najpiękniejszéj. Rostrzygnijcie francuszczyzny nieuszanowanie szarak barbarzyństwa kątku wesele bierze wyciągniętą Prócz Wysoko żadna przyciągnąć. Rosciągnionemi nowy Bezładnością moki tylu najwymowniejsza pęk przejrzystość bezprzykładną. Łona Białopiotrowiczem Zwano swoje pęki ujrzy czyli kwita.",
+      "Jaja rozsądkiem Kniaziewiez gorącość czarniutkie towarzystwa dnie Herb Jaki. Król nieprzyjaciele najstraszniéj radzi jaką organ progi rostrzygnienie zaraz każe zdala. Ranną Rzeczypospolitéj Najpiękniejszego każdy Prócz kłów najpiękniejszéj. Rostrzygnijcie francuszczyzny nieuszanowanie szarak barbarzyństwa kątku wesele bierze wyciągniętą Prócz Wysoko żadna przyciągnąć.",
     nameOfCard: "Korvo Atano",
   },
   {
@@ -51,17 +53,17 @@ const steps3 = [
   {
     description: `Зна Hipparion рке још moschatus Dwellings amphibius лан. Bison Munro ватра“ Ursus alces „Усред Jolly Eleph. Учинила На да па крупног чеоњача Loir Но ил са дознала Ну. Bison „Усред Eleph Ursus Munro Jolly alces ватра“. Lake замишљала не огранцима гладовали но удружених искуством Loir пределима Ни. Њу одгајиваше На приморцима Cher по Он То Магденбург По.
     `,
-    nameOfCard: "Kadzukha,",
+    nameOfCard: "Kadzukha",
   },
   {
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis recusandae vel minima aspernatur aperiam sit, suscipit nemo unde repellat amet delectus porro reiciendis aliquid iure excepturi vero nobis blanditiis repellendus.",
-    nameOfCard: "Zhong ",
+    nameOfCard: "Zhong",
   },
   {
     description:
       "Ratione probant sciatur id ex docetur replere is. Olim et foco sane igni toga mo. Machinam putandum potestis aut qua imperiti cognitum. Ha in agnoscam potentem ad addantur. Vi nexum certo velut errem an istis ha falli. Ab ad noctu ac ut veras terra ausit nudam. Hic sap alia scio tur spem.",
-    nameOfCard: "Korvo ",
+    nameOfCard: "Korvo",
   },
   {
     description:
@@ -105,38 +107,45 @@ const HomePage = () => {
             margin: "2rem",
           }}
         >
-          <Box
-            className="reviewsText"
-            sx={{
-              height: 405,
-              maxWidth: 450,
-              width: "100%",
-              p: 2,
-
-              fontSize: "20px",
-              color: "rgba(0, 0, 0, 0.7)",
-            }}
-          >
-            {steps[activeStep].description}
+          <Box>
+            <Box
+              className="reviewsText"
+              sx={{
+                height: 305,
+                maxWidth: 450,
+                width: "100%",
+                p: 2,
+                fontSize: "20px",
+                color: "rgba(0, 0, 0, 0.7)",
+              }}
+            >
+              {steps[activeStep].description}
+            </Box>
             <Box
               className="reviewsTextTitle"
-              sx={{ fontSize: "24px", color: "black", marginTop: "7rem" }}
+              sx={{
+                fontSize: "24px",
+                color: "black",
+                marginTop: "7rem",
+              }}
             >
               {steps[activeStep].nameOfCard}
             </Box>
           </Box>
-          <Box
-            className="reviewsText"
-            sx={{
-              height: 405,
-              maxWidth: 450,
-              width: "100%",
-              p: 2,
-              fontSize: "20px",
-              color: "rgba(0, 0, 0, 0.7)",
-            }}
-          >
-            {steps2[activeStep].description}
+          <Box>
+            <Box
+              className="reviewsText"
+              sx={{
+                height: 305,
+                maxWidth: 450,
+                width: "100%",
+                p: 2,
+                fontSize: "20px",
+                color: "rgba(0, 0, 0, 0.7)",
+              }}
+            >
+              {steps2[activeStep].description}
+            </Box>
             <Box
               className="reviewsTextTitle"
               sx={{ fontSize: "24px", color: "black", marginTop: "7rem" }}
@@ -144,18 +153,20 @@ const HomePage = () => {
               {steps2[activeStep].nameOfCard}
             </Box>
           </Box>
-          <Box
-            className="reviewsText"
-            sx={{
-              height: 405,
-              maxWidth: 450,
-              width: "100%",
-              p: 2,
-              fontSize: "20px",
-              color: "rgba(0, 0, 0, 0.7)",
-            }}
-          >
-            {steps3[activeStep].description}
+          <Box>
+            <Box
+              className="reviewsText"
+              sx={{
+                height: 305,
+                maxWidth: 450,
+                width: "100%",
+                p: 2,
+                fontSize: "20px",
+                color: "rgba(0, 0, 0, 0.7)",
+              }}
+            >
+              {steps3[activeStep].description}
+            </Box>
             <Box
               className="reviewsTextTitle"
               sx={{ fontSize: "24px", color: "black", marginTop: "7rem" }}

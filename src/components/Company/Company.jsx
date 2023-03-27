@@ -8,7 +8,7 @@ const Company = () => {
   return (
     <div className="company_main_block">
       <div className="company_block1">
-        <h2>Компания</h2>
+        <h2 className="h222">Компания</h2>
         <p className="company_p1">
           Не следует, однако, забывать, что дальнейшее развитие различных форм
           деятельности позволяет оценить значение направлений прогрессивного

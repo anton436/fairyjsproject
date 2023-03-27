@@ -15,13 +15,12 @@ const Catalog = () => {
     <div>
       <div className="catalog">
         <div className="catalogHead">
-          <h1> Каталог</h1>
+          <h1 className="catalogHeadH1"> Каталог</h1>
           <p
             style={{ cursor: "pointer", fontSize: "24px", color: "black" }}
             onClick={() => navigate("/products")}
             id="catalogH1"
           >
-            {" "}
             Перейти в каталог
           </p>
         </div>
@@ -30,11 +29,11 @@ const Catalog = () => {
             <img src={pic} alt="" />
             <div className="cardBottom">
               <span>
-                <h2>Кровать Амелия 1200</h2>
-                <h3>19 940 грн</h3>
+                <h2 className="catalogh2">Кровать Амелия 1200</h2>
+                <h3 className="catalogh3">19 940 грн</h3>
               </span>
               <button>
-                <img src={compareImg} alt="" />
+                <img className="imgCatalog" src={compareImg} alt="" />
               </button>
             </div>
           </div>
@@ -43,11 +42,11 @@ const Catalog = () => {
             <img src={pic1} alt="" />
             <div className="cardBottom">
               <span>
-                <h2>Кровать Амелия 1400</h2>
-                <h3>19 940 грн</h3>
+                <h2 className="catalogh2">Кровать Амелия 1400</h2>
+                <h3 className="catalogh3">19 940 грн</h3>
               </span>
               <button>
-                <img src={compareImg} alt="" />
+                <img className="imgCatalog" src={compareImg} alt="" />
               </button>
             </div>
           </div>
@@ -57,37 +56,37 @@ const Catalog = () => {
 
             <div className="cardBottom">
               <span>
-                <h2>Кровать Теннесси 1600</h2>
-                <h3>19 940 грн</h3>
+                <h2 className="catalogh2">Кровать Теннесси 1600</h2>
+                <h3 className="catalogh3">19 940 грн</h3>
               </span>
               <button>
-                <img src={compareImg} alt="" />
+                <img className="imgCatalog" src={compareImg} alt="" />
               </button>
             </div>
           </div>
 
           <div className="card">
             <img src={pic3} alt="" />
-            <disv className="cardBottom">
+            <div className="cardBottom">
               <span>
-                <h2>Кровать Рим 1600</h2>
-                <h3>19 940 грн</h3>
+                <h2 className="catalogh2">Кровать Рим 1600</h2>
+                <h3 className="catalogh3">19 940 грн</h3>
               </span>
               <button>
-                <img src={compareImg} alt="" />
+                <img className="imgCatalog" src={compareImg} alt="" />
               </button>
-            </disv>
+            </div>
           </div>
           <div className="card">
             <img src={pic4} alt="" />
 
             <div className="cardBottom">
               <span>
-                <h2>Кровать Монтана 1800</h2>
-                <h3>19 940 грн</h3>
+                <h2 className="catalogh2">Кровать Монтана 1800</h2>
+                <h3 className="catalogh3">19 940 грн</h3>
               </span>
               <button>
-                <img src={compareImg} alt="" />
+                <img className="imgCatalog" src={compareImg} alt="" />
               </button>
             </div>
           </div>
@@ -95,11 +94,11 @@ const Catalog = () => {
             <img src={pic5} alt="" />
             <div className="cardBottom">
               <span>
-                <h2>Кровать Флоренция 1600</h2>
-                <h3>19 940 грн</h3>
+                <h2 className="catalogh2">Кровать Флоренция 1600</h2>
+                <h3 className="catalogh3">19 940 грн</h3>
               </span>
               <button>
-                <img src={compareImg} alt="" />
+                <img className="imgCatalog" src={compareImg} alt="" />
               </button>
             </div>
           </div>

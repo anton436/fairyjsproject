@@ -28,6 +28,43 @@
 }
 
 /* ========================================== */
+@media all and (max-width: 1024px) {
+  .reviews {
+    margin-top: 2rem;
+  }
+
+  .LineOfTitle {
+    margin-left: 5rem;
+    width: 12% !important;
+  }
+
+  .reviews-up_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 5rem 1rem 5rem;
+  }
+
+  .reviews__title {
+    font-size: 30px;
+  }
+
+  .btn__navigation {
+    height: 20px !important;
+    width: 30% !important;
+    margin-left: 1rem !important;
+  }
+
+  .reviewsText {
+    font-size: 15px !important;
+    height: 250px;
+  }
+
+  .reviewsTextTitle {
+    font-size: 20px !important;
+    margin-top: 2rem !important;
+  }
+}
 
 @media all and (max-width: 768px) {
   .reviews {
@@ -57,7 +94,7 @@
   }
 
   .reviewsText {
-    font-size: 15px !important;
+    font-size: 13px !important;
     height: 250px;
   }
 
@@ -75,7 +112,8 @@
 
   .LineOfTitle {
     margin-left: 3rem;
-    width: 15% !important;
+    width: 20% !important;
+    margin-top: 5rem !important;
   }
 
   .reviews-up_block {
@@ -97,7 +135,7 @@
 
   .reviewsText {
     font-size: 15px !important;
-    height: 180px !important;
+    height: 250px !important;
   }
 
   .reviewsTextTitle {
@@ -118,7 +156,7 @@
 
   .LineOfTitle {
     margin-left: 3rem;
-    width: 15% !important;
+    width: 20% !important;
   }
 
   .reviews-up_block {
@@ -134,17 +172,17 @@
 
   .btn__navigation {
     height: 20px !important;
-    width: 30% !important;
+    width: 40% !important;
     margin-left: 1rem !important;
   }
 
   .reviewsText {
-    font-size: 15px !important;
-    height: 220px !important;
+    font-size: 13px !important;
+    height: 250px !important;
   }
 
   .reviewsTextTitle {
-    font-size: 20px !important;
+    font-size: 15px !important;
     margin-top: 10px !important;
   }
 
@@ -161,7 +199,7 @@
 
   .LineOfTitle {
     margin-left: 3rem;
-    width: 15% !important;
+    width: 20% !important;
   }
 
   .reviews-up_block {
@@ -182,7 +220,7 @@
 
   .reviewsText {
     font-size: 15px !important;
-    height: 245px !important;
+    height: 365px !important;
   }
 
   .reviewsTextTitle {

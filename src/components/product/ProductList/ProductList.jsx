@@ -18,8 +18,8 @@ const ProductList = () => {
 
   useEffect(() => {
     getProducts();
-    // console.warn(products);
   }, []);
+
   //! pagination
   const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {

@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Map.css";
 const Map = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="container_map">
@@ -36,7 +38,7 @@ const Map = () => {
           деятельности позволяет оценить значение направлений прогрессивного
           развития.
         </p>
-        <a href="#" className="connection__btn">
+        <a onClick={() => navigate("/contacts")} className="connection__btn">
           связаться
         </a>
       </div>

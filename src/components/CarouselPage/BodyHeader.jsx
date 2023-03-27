@@ -1,8 +1,9 @@
 import React from "react";
-import photo1 from "./HM2.png";
-import photo2 from "./HM3.svg";
-import photo3 from "./HM4.svg";
-import next from "./Next.png";
+import photo1 from "../homepageImg/HM2.png";
+import photo2 from "../homepageImg/HM3.png";
+import photo3 from "../homepageImg/HM4.png";
+import next from "../homepageImg/next.png";
+
 import "./Carousel.css";
 import "./CarouselAdapt.css";
 
@@ -10,7 +11,7 @@ const BodyHeader = () => {
   return (
     <div>
       <div className="header_block1">
-        <div className="header_block_text" style={{ width: "50%" }}>
+        <div className="header_block_text">
           <h1 className="header_title">Новинка Box Spring</h1>
           <p className="header_title2">
             Не следует, однако, забывать, что дальнейшее развитие различных форм
@@ -24,16 +25,11 @@ const BodyHeader = () => {
             Подробнее <img src={next} alt="button" />
           </button>
         </div>
-        <div className="Hellooo">
-          <img
-            className="headerImg1"
-            src={photo1}
-            alt="photo"
-            style={{ width: "50%" }}
-          />
+        <div>
+          <img className="headerImg1" src={photo1} alt="photo" />
         </div>
       </div>
-      <div className="headerBottom">
+      <div className="header_block1">
         <div>
           <img className="headerImg2" src={photo2} alt="photo" />
         </div>

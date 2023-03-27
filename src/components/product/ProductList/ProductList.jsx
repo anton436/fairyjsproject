@@ -9,16 +9,16 @@ import { useSearchParams } from "react-router-dom";
 
 const ProductList = () => {
   const { getProducts, products } = useProducts();
-
   const [searchParams] = useSearchParams();
+  useEffect(() => {
+    // console.log(searchParams);
+    getProducts();
+    // console.warn(products);
+  }, [searchParams]);
+
   useEffect(() => {
     getProducts();
   }, []);
-
-  useEffect(() => {
-    getProducts();
-    setPage(1);
-  }, [searchParams]);
 
   //! pagination
   const [page, setPage] = React.useState(1);

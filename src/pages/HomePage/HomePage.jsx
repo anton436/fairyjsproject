@@ -6,14 +6,14 @@ import Reviews from "../../components/Reviews/Reviews";
 import Header from "../../components/Header/Header";
 import Map from "../../components/Map/Map";
 import CarouselPage from "../../components/CarouselPage/CarouselPage";
-// import BodyHeader from "../../components/CarouselPage/BodyHeader";
+import BodyHeader from "../../components/CarouselPage/BodyHeader";
 
 const HomePage = () => {
   return (
     <div>
       <CarouselPage />
-      {/* <BodyHeader /> */}
-      <Header />
+      <BodyHeader />
+      {/* <Header /> */}
       <Catalog />
       <Gallery2 />
       <Map />

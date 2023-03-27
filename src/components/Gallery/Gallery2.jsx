@@ -23,8 +23,32 @@ export default function App() {
   return (
     <>
       <Swiper
+        breakpoints={{
+          // when window width is >= 640px
+          320: {
+            width: 220,
+            slidesPerView: 1,
+          },
+          640: {
+            width: 640,
+            slidesPerView: 1,
+          },
+          // when window width is >= 768px
+          768: {
+            width: 768,
+            slidesPerView: 3,
+          },
+          1024: {
+            width: 850,
+            slidesPerView: 3,
+          },
+          1440: {
+            width: 1150,
+            slidesPerView: 3,
+          },
+        }}
         slidesPerView={3}
-        spaceBetween={30}
+        spaceBetween={10}
         freeMode={true}
         pagination={{
           clickable: true,
@@ -67,7 +91,7 @@ export default function App() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          S{" "}
+          {" "}
           <div className="cardImageGallery">
             <img src={img6} alt="" />
           </div>

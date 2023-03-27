@@ -110,3 +110,113 @@ hr {
   margin: 10px;
   font-weight: 300;
 }
+@media all and (max-width: 790px) {
+  .title {
+    font-size: 35px;
+  }
+  #ContactUs_right_button {
+    margin-left: 50%;
+  }
+  .content {
+    font-size: 15px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .ourContacts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+  }
+  .title {
+    margin-top: 70%;
+  }
+  .ContactUs_left {
+    width: 80%;
+  }
+  .ContactUs_right {
+    width: 100%;
+  }
+  hr {
+    width: 100%;
+  }
+  .contactInfo1 {
+    width: 100%;
+  }
+  #ContactUs_right_button {
+    margin-left: 75%;
+  }
+}
+@media all and (max-width: 640px) {
+  .title {
+    margin-top: 90%;
+    margin-left: -45;
+  }
+  .content {
+    margin-left: 8.5%;
+    width: 86%;
+  }
+}
+@media all and (max-width: 550px) {
+  .content {
+    margin-left: 4.5%;
+    width: 90%;
+  }
+  #ContactUs_right_button {
+    margin-left: 65%;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .wrapper {
+    margin-top: 50px;
+  }
+  .content {
+    font-size: 13px;
+  }
+  .title {
+    font-size: 30px;
+  }
+}
+
+@media all and (max-width: 501px) {
+  #ContactUs_right_button {
+    margin-left: 58%;
+  }
+  .contactInfo1 {
+    width: 135%;
+  }
+}
+@media all and (max-width: 376px) {
+  .InfoContact {
+    margin-bottom: 55px;
+  }
+  .ContactUs_left {
+    margin-bottom: 27px;
+  }
+  .ContactUs_left_p {
+    font-size: 17px;
+  }
+  .title {
+    font-size: 25px;
+  }
+  .content {
+    margin-left: 1.5%;
+    width: 100%;
+  }
+  #ContactUs_right_button {
+    margin-left: 50%;
+  }
+}
+@media all and (max-width: 341px) {
+  #ContactUs_right_button {
+    margin-left: 45%;
+  }
+  .InfoContact {
+    margin-bottom: 35px;
+  }
+  .contactInfo1 {
+    width: 160%;
+  }
+}

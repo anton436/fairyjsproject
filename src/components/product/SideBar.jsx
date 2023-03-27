@@ -11,12 +11,10 @@ import {
 } from "@mui/material";
 import { useSearchParams } from "react-router-dom";
 import { useProducts } from "../../contexts/ProductContextProvider";
-
 const SideBar = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("q") || "");
-  const { getProducts, fetchByParams } = useProducts();
-
+  const { fetchByParams, getProducts } = useProducts();
   useEffect(() => {
     setSearchParams({ q: search });
     getProducts();
@@ -43,9 +41,8 @@ const SideBar = () => {
               name="radio-buttons-group"
               onChange={(e) => fetchByParams("type", e.target.value)}
             >
-              <FormControlLabel value="all" control={<Radio />} label="All" />
-              <FormControlLabel value="Sofa" control={<Radio />} label="sofa" />
-              <FormControlLabel value="Bed" control={<Radio />} label="bed" />
+              <FormControlLabel value="sofa" control={<Radio />} label="sofa" />
+              <FormControlLabel value="bed" control={<Radio />} label="bed" />
               <FormControlLabel
                 value="Armchair"
                 control={<Radio />}

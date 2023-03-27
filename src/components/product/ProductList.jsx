@@ -1,26 +1,25 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import React, { useEffect } from "react";
-import { useProducts } from "../../../contexts/ProductContextProvider";
-import ProductCard from "../ProductCard";
+import { useProducts } from "../../contexts/ProductContextProvider";
+import ProductCard from "./ProductCard";
+import Typography from "@mui/material/Typography";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
-import "./ProductList.css";
 import { useSearchParams } from "react-router-dom";
 
 const ProductList = () => {
   const { getProducts, products } = useProducts();
-
   const [searchParams] = useSearchParams();
+  console.log(searchParams);
+
   useEffect(() => {
     getProducts();
   }, []);
 
   useEffect(() => {
     getProducts();
-    setPage(1);
   }, [searchParams]);
 
-  //! pagination
   const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {
     setPage(value);
@@ -34,34 +33,18 @@ const ProductList = () => {
     const end = begin + itemsPerPage;
     return products.slice(begin, end);
   };
-
-  //! pagination
-
   return (
-    <Box sx={{ display: "flex", flexDirection: "column" }}>
-      <Typography id="product_list_title">Блог</Typography>
-
-      <Box id="list_card">
+    <>
+      <Box sx={{ display: "flex", flexWrap: "wrap" }}>
         {currentData().map((item) => (
           <ProductCard item={item} key={item.id} />
         ))}
       </Box>
-
-      <Stack sx={{ display: "flex", marginTop: "60px" }} spacing={2}>
-        <Pagination
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            marginBottom: "60px",
-          }}
-          count={count}
-          color="success"
-          variant="outlined"
-          page={page}
-          onChange={handleChange}
-        />
+      <Stack spacing={2}>
+        <Typography>Page: {page}</Typography>
+        <Pagination count={count} page={page} onChange={handleChange} />
       </Stack>
-    </Box>
+    </>
   );
 };
 

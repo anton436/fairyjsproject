@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { createContext, useContext, useReducer } from "react";
+
 import { useNavigate } from "react-router-dom";
 
 import { API } from "../helpers/consts";
@@ -15,24 +16,6 @@ const INIT_STATE = {
   productDetails: {},
   randomProducts: [],
 };
-
-// const reducer = (state = INIT_STATE, action) => {
-//   switch (action.type) {
-//     case "GET_PRODUCTS":
-//       return { ...state, products: action.payload };
-
-//     case "GET_PRODUCT_DETAILS":
-//       return { ...state, productDetails: action.payload };
-
-//     default:
-//       return state;
-//   }
-// };
-
-// const INIT_STATE = {
-//   products: [],
-//   productDetails: {},
-// };
 
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
@@ -98,13 +81,14 @@ const ProductContextProvider = ({ children }) => {
     } else {
       search.set(query, value);
     }
+    const url = `${window.location.pathname}? ${search.toString()}`;
 
-    const url = `${window.location.pathname}?${search.toString()}`;
     navigate(url);
   };
 
   const values = {
     saveEditedProduct,
+    fetchByParams,
     addProduct,
     getProducts,
     products: state.products,

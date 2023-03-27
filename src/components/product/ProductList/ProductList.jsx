@@ -5,14 +5,21 @@ import ProductCard from "../ProductCard";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import "./ProductList.css";
+import { useSearchParams } from "react-router-dom";
 
 const ProductList = () => {
   const { getProducts, products } = useProducts();
 
+  const [searchParams] = useSearchParams();
   useEffect(() => {
     getProducts();
     // console.warn(products);
   }, []);
+  useEffect(() => {
+    // console.log(searchParams);
+    getProducts();
+    // console.warn(products);
+  }, [searchParams]);
   //! pagination
   const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {

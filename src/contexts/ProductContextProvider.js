@@ -34,8 +34,6 @@ const reducer = (state = INIT_STATE, action) => {
 
 const ProductContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
-  const navigate = useNavigate();
-  const location = useLocation();
 
   const navigate = useNavigate();
   //! read (get request)
@@ -74,19 +72,6 @@ const ProductContextProvider = ({ children }) => {
   const saveEditedProduct = async (editedProduct) => {
     await axios.patch(`${API}/${editedProduct.id}`, editedProduct);
     getProducts();
-  };
-  const fetchByParams = async (query, value) => {
-    const search = new URLSearchParams(location.search);
-
-    if (value === "all") {
-      search.delete(query);
-    } else {
-      search.set(query, value);
-    }
-    const url = `${location.pathname}?${search.toString()}`;
-    console.log(search.toString());
-    console.log(url);
-    navigate(url);
   };
 
   const fetchByParams = async (query, value) => {

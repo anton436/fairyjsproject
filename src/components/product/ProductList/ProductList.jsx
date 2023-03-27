@@ -9,7 +9,6 @@ import { useSearchParams } from "react-router-dom";
 
 const ProductList = () => {
   const { getProducts, products } = useProducts();
-  const [searchParams] = useSearchParams();
 
   const [searchParams] = useSearchParams();
   useEffect(() => {
@@ -19,8 +18,7 @@ const ProductList = () => {
   useEffect(() => {
     getProducts();
   }, [searchParams]);
-  
-  
+
   //! pagination
   const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {

@@ -12,6 +12,7 @@ export const useProducts = () => {
 const INIT_STATE = {
   products: [],
   productDetails: {},
+  randomProducts: [],
 };
 
 // const reducer = (state = INIT_STATE, action) => {
@@ -39,6 +40,8 @@ const reducer = (state = INIT_STATE, action) => {
 
     case "GET_PRODUCT_DETAILS":
       return { ...state, productDetails: action.payload };
+    case "GET_RANDOM_PRODUCTS":
+      return { ...state, randomProducts: action.payload };
 
     default:
       return state;
@@ -54,6 +57,11 @@ const ProductContextProvider = ({ children }) => {
     const { data } = await axios.get(API);
 
     dispatch({ type: "GET_PRODUCTS", payload: data });
+  };
+  const getRandomProducts = async () => {
+    const { data } = await axios.get(API + "?_limit=3");
+
+    dispatch({ type: "GET_RANDOM_PRODUCTS", payload: data });
   };
 
   // ! create (post request)
@@ -89,6 +97,8 @@ const ProductContextProvider = ({ children }) => {
     deleteProduct,
     getProductDetails,
     productDetails: state.productDetails,
+    getRandomProducts,
+    randomProducts: state.randomProducts,
   };
 
   return (

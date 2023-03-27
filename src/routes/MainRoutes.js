@@ -4,6 +4,7 @@ import Company from "../components/Company/Company";
 import ContactUs from "../components/ContactUs/ContactUs";
 import ProductCard from "../components/product/ProductCard";
 import AdminPage from "../pages/AdminPage/AdminPage";
+import DetailsPage from "../pages/DetailsPage/DetailsPage";
 import EditProductPage from "../pages/EditProductPage/EditProductPage";
 import HomePage from "../pages/HomePage/HomePage";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
@@ -18,6 +19,7 @@ const MainRoutes = () => {
     { link: "/edit/:id", element: <EditProductPage />, id: 5 },
     { link: "/company", element: <Company />, id: 6 },
     { link: "/contacts", element: <ContactUs />, id: 7 },
+    { link: "/details/:id", element: <DetailsPage />, id: 8 },
   ];
   return (
     <>

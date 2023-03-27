@@ -11,14 +11,16 @@ const ProductList = () => {
   const { getProducts, products } = useProducts();
   const [searchParams] = useSearchParams();
 
+  const [searchParams] = useSearchParams();
   useEffect(() => {
     getProducts();
-    // console.warn(products);
   }, []);
 
   useEffect(() => {
     getProducts();
   }, [searchParams]);
+  
+  
   //! pagination
   const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {

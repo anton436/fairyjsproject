@@ -13,9 +13,10 @@ import { useSearchParams } from "react-router-dom";
 import { useProducts } from "../../contexts/ProductContextProvider";
 
 const SideBar = () => {
-  const { fetchByParams } = useProducts();
+
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState(searchParams.get("q") || "");
+  const { getProducts, fetchByParams } = useProducts();
 
   useEffect(() => {
     setSearchParams({
@@ -33,7 +34,6 @@ const SideBar = () => {
           onChange={(e) => setSearch(e.target.value)}
           value={search}
         />
-
         <Grid>
           <FormControl>
             <FormLabel id="demo-radio-buttons-group-label">Type</FormLabel>

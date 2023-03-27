@@ -32,8 +32,6 @@
       "type": "Sofa",
       "id": 4
     },
-  
-   
     {
       "name": "Hello",
       "description": "Hi",
@@ -129,10 +127,14 @@
       "picture": "Here",
       "type": "Pillow",
       "id": 16
-
-
+    },
+    {
+      "name": "Альбина",
+      "description": "vghnjmk,l.",
+      "price": 15000,
+      "picture": "https://assets.bolia.com/cdn-cgi/image/fit=crop,width=500,format=auto,height=571,quality=81/globalassets/media/4.-collections/fy21/miljo-fy21/main-with-model/noora-classic-cushion-soul-plateau-medium-large-balloon-small-large-hour-vira_ingrid02.jpg?v=1062870378",
+      "type": "sofa",
+      "id": 17
     }
-    
-   
   ]
 }

@@ -17,6 +17,7 @@ const ProductList = () => {
 
   useEffect(() => {
     getProducts();
+    setPage(1);
   }, [searchParams]);
 
   //! pagination

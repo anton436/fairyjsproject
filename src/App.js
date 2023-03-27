@@ -8,7 +8,7 @@ import MainRoutes from "./routes/MainRoutes";
 const App = () => {
   return (
     <ProductContextProvider>
-      {/* <Navbar /> */}
+      <Navbar />
       <MainRoutes />
     </ProductContextProvider>
   );

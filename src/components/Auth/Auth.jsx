@@ -13,7 +13,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useAuth } from "../../contexts/AuthContextProvider";
-import { navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Copyright(props) {
   return (
@@ -40,17 +40,21 @@ export default function Auth() {
     email,
     password,
     user,
+
     emailError,
     passwordError,
     hasAccount,
+
     setPassword,
     setEmail,
     setHasAccount,
+
     handleSignUp,
     handleLogin,
   } = useAuth();
 
   const navigate = useNavigate();
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -110,6 +114,7 @@ export default function Auth() {
               onChange={(e) => setPassword(e.target.value)}
               helperText={passwordError}
             />
+
             {hasAccount ? (
               <Button
                 type="submit"
@@ -121,7 +126,7 @@ export default function Auth() {
                   navigate("/");
                 }}
               >
-                Log in
+                Log In
               </Button>
             ) : (
               <Button
@@ -145,18 +150,18 @@ export default function Auth() {
                 {hasAccount ? (
                   <Link
                     href="#"
-                    variant="body2 "
+                    variant="body2"
                     onClick={() => setHasAccount(!hasAccount)}
                   >
-                    {"Don't have an account? Register now"}
+                    {"Don't have an account? Register Now"}
                   </Link>
                 ) : (
                   <Link
                     href="#"
-                    variant="body2 "
+                    variant="body2"
                     onClick={() => setHasAccount(!hasAccount)}
                   >
-                    {"Already have an account? Log in"}
+                    {"Already have an account? Log In"}
                   </Link>
                 )}
               </Grid>

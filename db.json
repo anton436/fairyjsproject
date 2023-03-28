@@ -11,6 +11,7 @@
     {
       "name": "Акция на креслы",
       "description": "Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение направлений прогрессивного развития.  ",
+
       "price": 210,
       "picture": "https://images.pexels.com/photos/2747070/pexels-photo-2747070.jpeg?auto=compress&cs=tinysrgb&w=600",
       "type": "Armchair",
@@ -46,8 +47,10 @@
       "price": 282,
       "picture": "https://images.pexels.com/photos/4946759/pexels-photo-4946759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "type": "Sofa",
-      "id": 6
+
+      "id": 5
     },
+
     {
       "name": "Акция на угловые диваны",
       "description": "Не следует, однако, забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение направлений прогрессивного развития.  ",

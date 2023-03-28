@@ -42,8 +42,8 @@ const SideBar = () => {
               onChange={(e) => fetchByParams("type", e.target.value)}
             >
               <FormControlLabel value="all" control={<Radio />} label="all" />
-              <FormControlLabel value="sofa" control={<Radio />} label="sofa" />
-              <FormControlLabel value="bed" control={<Radio />} label="bed" />
+              <FormControlLabel value="Sofa" control={<Radio />} label="sofa" />
+              <FormControlLabel value="Bed" control={<Radio />} label="bed" />
               <FormControlLabel
                 value="Armchair"
                 control={<Radio />}
@@ -61,7 +61,7 @@ const SideBar = () => {
               name="radio-buttons-group"
               onChange={(e) => fetchByParams("price_lte", e.target.value)}
             >
-              <FormControlLabel value="all" control={<Radio />} label="All" />
+              <FormControlLabel value="all" control={<Radio />} label="all" />
               <FormControlLabel
                 value="200"
                 control={<Radio />}

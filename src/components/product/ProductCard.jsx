@@ -10,6 +10,8 @@ import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/system";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import { ADMIN } from "../../helpers/consts";
+import "./Product.css";
+
 <style>
   @import
   url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans:wght@300&display=swap');
@@ -24,6 +26,7 @@ export default function ProductCard({ item }) {
 
   return (
     <Card
+      className="cards"
       sx={{
         maxWidth: 1100,
         display: "flex",
@@ -32,6 +35,7 @@ export default function ProductCard({ item }) {
       }}
     >
       <CardMedia
+        className="cards_img"
         sx={{
           height: 320,
           width: "27%",
@@ -42,6 +46,7 @@ export default function ProductCard({ item }) {
       />
 
       <CardContent
+        className="cards_content"
         style={{
           display: "flex",
           flexDirection: "column",
@@ -54,6 +59,7 @@ export default function ProductCard({ item }) {
             gutterBottom
             variant="h5"
             component="div"
+            className="cards_title"
             sx={{
               fontFamily: "sans-serif",
               fontSize: "36px",
@@ -65,6 +71,7 @@ export default function ProductCard({ item }) {
           </Typography>
           <Typography
             variant="body2"
+            className="cards_text"
             sx={{
               fontSize: "18px",
               marginTop: "30px",
@@ -77,6 +84,7 @@ export default function ProductCard({ item }) {
           </Typography>
           <Typography
             variant="body5"
+            className="cards_price"
             sx={{
               fontSize: "24px",
               color: "#000000",
@@ -87,10 +95,28 @@ export default function ProductCard({ item }) {
             {item.price} $
           </Typography>
         </Box>
-        <CardActions sx={{ height: "50px" }}>
+        <CardActions className="btn_control" sx={{ height: "50px" }}>
+          <Button
+            className="cards_btn"
+            id="btn_details"
+            sx={{
+              width: "20%",
+              height: "40px",
+              backgroundColor: "#006c73",
+              color: "#b7b7a4",
+              marginLeft: "25px",
+            }}
+            onClick={() => navigate(`/details/${item.id}`)}
+            size="small, "
+          >
+            Details
+          </Button>
+
           {email === ADMIN ? (
             <>
+              {" "}
               <Button
+                className="cards_btn"
                 sx={{
                   width: "20%",
                   height: "40px",
@@ -98,12 +124,13 @@ export default function ProductCard({ item }) {
                   color: "#b7b7a4",
                   marginLeft: "25px",
                 }}
-                onClick={() => navigate(`/details/${item.id}`)}
+                onClick={() => deleteProduct(item.id)}
                 size="small, "
               >
-                Details
+                Delete
               </Button>
               <Button
+                className="cards_btn"
                 sx={{
                   width: "20%",
                   height: "40px",

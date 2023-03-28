@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import fire from "../fire";
+
 export const authContext = createContext();
+
 export const useAuth = () => {
   return useContext(authContext);
 };
@@ -17,6 +19,7 @@ const AuthContextProvider = ({ children }) => {
     setEmail("");
     setPassword("");
   };
+
   const clearErrors = () => {
     setEmailError("");
     setPasswordError("");
@@ -30,7 +33,6 @@ const AuthContextProvider = ({ children }) => {
       .catch((err) => {
         switch (err.code) {
           case "auth/email-already-in-use":
-
           case "auth/invalid-email":
             setEmailError(err.message);
             break;
@@ -54,6 +56,7 @@ const AuthContextProvider = ({ children }) => {
           case "auth/user-not-found":
             setEmailError(err.message);
             break;
+
           case "auth/wrong-password":
             setPasswordError(err.message);
             break;
@@ -75,21 +78,26 @@ const AuthContextProvider = ({ children }) => {
       }
     });
   };
+
   useEffect(() => {
     authListener();
   }, []);
 
   console.log(user);
+
   const values = {
     email,
     password,
     user,
+
     emailError,
     passwordError,
     hasAccount,
+
     setPassword,
     setEmail,
     setHasAccount,
+
     handleSignUp,
     handleLogin,
     handleLogout,

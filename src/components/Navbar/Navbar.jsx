@@ -20,6 +20,7 @@ import instagram from "./images/instagram_icon.png";
 import "./navbar.css";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import { ADMIN } from "../../helpers/consts";
+
 const pages = [
   { name: "Каталог кроватей", link: "/", id: 1 },
   { name: "Компания", link: "/company", id: 2 },
@@ -50,6 +51,7 @@ function Navbar() {
   } = useAuth();
 
   const navigate = useNavigate();
+
   const handleChange = (event) => {
     setCity(event.target.value);
   };
@@ -188,7 +190,7 @@ function Navbar() {
                 onClick={() => navigate("/admin")}
                 sx={{ my: 2, display: "block" }}
               >
-                <Typography id="pages_link">Admin Page</Typography>
+                <Typography id="pages_link">Admin page</Typography>
               </Button>
             ) : null}
 

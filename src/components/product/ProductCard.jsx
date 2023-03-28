@@ -8,6 +8,8 @@ import Typography from "@mui/material/Typography";
 import { useProducts } from "../../contexts/ProductContextProvider";
 import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/system";
+import { useAuth } from "../../contexts/AuthContextProvider";
+import { ADMIN } from "../../helpers/consts";
 <style>
   @import
   url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans:wght@300&display=swap');
@@ -16,6 +18,10 @@ import { Box } from "@mui/system";
 export default function ProductCard({ item }) {
   const navigate = useNavigate();
   const { deleteProduct } = useProducts();
+  const {
+    user: { email },
+  } = useAuth();
+
   return (
     <Card
       sx={{
@@ -82,44 +88,35 @@ export default function ProductCard({ item }) {
           </Typography>
         </Box>
         <CardActions sx={{ height: "50px" }}>
-          <Button
-            sx={{
-              width: "20%",
-              height: "40px",
-              backgroundColor: "#006c73",
-              color: "#b7b7a4",
-              marginLeft: "25px",
-            }}
-            onClick={() => navigate(`/details/${item.id}`)}
-            size="small, "
-          >
-            Details
-          </Button>
-          <Button
-            sx={{
-              width: "20%",
-              height: "40px",
-              backgroundColor: "#006c73",
-              color: "#b7b7a4",
-              marginLeft: "25px",
-            }}
-            onClick={() => deleteProduct(item.id)}
-            size="small, "
-          >
-            Delete
-          </Button>
-          <Button
-            sx={{
-              width: "20%",
-              height: "40px",
-              backgroundColor: "#006c73",
-              color: "#b7b7a4",
-            }}
-            onClick={() => navigate(`/edit/${item.id}`)}
-            size="small"
-          >
-            Edit
-          </Button>
+          {email === ADMIN ? (
+            <>
+              <Button
+                sx={{
+                  width: "20%",
+                  height: "40px",
+                  backgroundColor: "#006c73",
+                  color: "#b7b7a4",
+                  marginLeft: "25px",
+                }}
+                onClick={() => navigate(`/details/${item.id}`)}
+                size="small, "
+              >
+                Details
+              </Button>
+              <Button
+                sx={{
+                  width: "20%",
+                  height: "40px",
+                  backgroundColor: "#006c73",
+                  color: "#b7b7a4",
+                }}
+                onClick={() => navigate(`/edit/${item.id}`)}
+                size="small"
+              >
+                Edit
+              </Button>
+            </>
+          ) : null}
         </CardActions>
       </CardContent>
     </Card>

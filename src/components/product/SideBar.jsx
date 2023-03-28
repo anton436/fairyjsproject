@@ -41,6 +41,7 @@ const SideBar = () => {
               name="radio-buttons-group"
               onChange={(e) => fetchByParams("type", e.target.value)}
             >
+              <FormControlLabel value="all" control={<Radio />} label="all" />
               <FormControlLabel value="sofa" control={<Radio />} label="sofa" />
               <FormControlLabel value="bed" control={<Radio />} label="bed" />
               <FormControlLabel
@@ -58,7 +59,9 @@ const SideBar = () => {
               aria-labelledby="demo-radio-buttons-group-label"
               defaultValue="all"
               name="radio-buttons-group"
+              onChange={(e) => fetchByParams("price_lte", e.target.value)}
             >
+              <FormControlLabel value="all" control={<Radio />} label="All" />
               <FormControlLabel
                 value="200"
                 control={<Radio />}

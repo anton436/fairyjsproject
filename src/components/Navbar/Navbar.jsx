@@ -9,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
@@ -18,14 +18,14 @@ import logo from "./images/logo_icon.png";
 import call from "./images/icon_call.png";
 import instagram from "./images/instagram_icon.png";
 import "./navbar.css";
-
+import { useAuth } from "../../contexts/AuthContextProvider";
+import { ADMIN } from "../../helpers/consts";
 const pages = [
   { name: "Каталог кроватей", link: "/", id: 1 },
   { name: "Компания", link: "/company", id: 2 },
   { name: "Блог", link: "/products", id: 3 },
   { name: "Контакты", link: "/contacts", id: 4 },
   { name: "", link: "/*", id: 5 },
-  { name: "Admin Page", link: "/admin", id: 6 },
 ];
 
 const style = {
@@ -44,6 +44,12 @@ function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [city, setCity] = React.useState("");
 
+  const {
+    handleLogout,
+    user: { email },
+  } = useAuth();
+
+  const navigate = useNavigate();
   const handleChange = (event) => {
     setCity(event.target.value);
   };
@@ -176,6 +182,28 @@ function Navbar() {
                 </Button>
               </Link>
             ))}
+
+            {email === ADMIN ? (
+              <Button
+                onClick={() => navigate("/admin")}
+                sx={{ my: 2, display: "block" }}
+              >
+                <Typography id="pages_link">Admin Page</Typography>
+              </Button>
+            ) : null}
+
+            {email ? (
+              <Button onClick={handleLogout} sx={{ my: 2, display: "block" }}>
+                <Typography id="pages_link">Logout</Typography>
+              </Button>
+            ) : (
+              <Button
+                onClick={() => navigate("/auth")}
+                sx={{ my: 2, display: "block" }}
+              >
+                <Typography id="pages_link">Login</Typography>
+              </Button>
+            )}
           </Box>
           <Button
             className="btn_contact"

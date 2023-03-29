@@ -6,8 +6,8 @@ import {
   getCountProductsInCart,
 } from "../helpers/functions";
 
-// Special trick for using context but in easier and faster way
 export const cartContext = createContext();
+
 export const useCart = () => useContext(cartContext);
 
 const INIT_STATE = {
@@ -19,8 +19,10 @@ function reducer(state = INIT_STATE, action) {
   switch (action.type) {
     case CART.GET_CART:
       return { ...state, cart: action.payload };
+
     case CART.GET_CART_LENGTH:
       return { ...state, cartLength: action.payload };
+
     default:
       return state;
   }
@@ -28,6 +30,7 @@ function reducer(state = INIT_STATE, action) {
 
 const CartContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
+
   const getCart = () => {
     let cart = JSON.parse(localStorage.getItem("cart"));
     if (!cart) {
@@ -47,6 +50,7 @@ const CartContextProvider = ({ children }) => {
     if (!cart) {
       cart = { products: [], totalPrice: 0 };
     }
+
     let newProduct = {
       item: product,
       count: 1,
@@ -77,13 +81,14 @@ const CartContextProvider = ({ children }) => {
   function checkProductInCart(id) {
     let cart = JSON.parse(localStorage.getItem("cart"));
     if (cart) {
-      let newCart = cart.products.filter((elem) => elem.item.id === id);
+      let newCart = cart.products.filter((elem) => elem.item.id == id);
       return newCart.length > 0 ? true : false;
     }
   }
 
   const changeProductCount = (count, id) => {
     let cart = JSON.parse(localStorage.getItem("cart"));
+
     cart.products = cart.products.map((product) => {
       if (product.item.id == id) {
         product.count = count;
@@ -94,6 +99,7 @@ const CartContextProvider = ({ children }) => {
 
     cart.totalPrice = calcTotalPrice(cart.products);
     localStorage.setItem("cart", JSON.stringify(cart));
+
     dispatch({ type: CART.GET_CART, payload: cart });
   };
 
@@ -101,6 +107,7 @@ const CartContextProvider = ({ children }) => {
     let cart = JSON.parse(localStorage.getItem("cart"));
     cart.products = cart.products.filter((elem) => elem.item.id != id);
     cart.totalPrice = calcTotalPrice(cart.products);
+
     localStorage.setItem("cart", JSON.stringify(cart));
     getCart();
   }
@@ -113,7 +120,6 @@ const CartContextProvider = ({ children }) => {
     changeProductCount,
     deleteCartProduct,
   };
-
   return <cartContext.Provider value={values}>{children}</cartContext.Provider>;
 };
 

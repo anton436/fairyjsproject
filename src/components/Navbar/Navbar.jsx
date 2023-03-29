@@ -22,7 +22,6 @@ import { useAuth } from "../../contexts/AuthContextProvider";
 import { ADMIN } from "../../helpers/consts";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Badge } from "@mui/material";
-import { useState } from "react";
 import { useCart } from "../../contexts/CartContextProvider";
 import { getCountProductsInCart } from "../../helpers/functions";
 

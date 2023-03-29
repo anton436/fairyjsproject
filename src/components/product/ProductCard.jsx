@@ -10,7 +10,6 @@ import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/system";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import { ADMIN } from "../../helpers/consts";
-import "./Product.css";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { IconButton } from "@mui/material";
 import { useCart } from "../../contexts/CartContextProvider";
@@ -22,12 +21,12 @@ import { useCart } from "../../contexts/CartContextProvider";
 export default function ProductCard({ item }) {
   const navigate = useNavigate();
   const { deleteProduct } = useProducts();
-  const { addProductToCart, checkProductInCart } = useCart();
 
   const {
     user: { email },
   } = useAuth();
 
+  const { addProductToCart, checkProductInCart } = useCart();
   return (
     <Card
       className="cards"
@@ -124,7 +123,6 @@ export default function ProductCard({ item }) {
 
           {email === ADMIN ? (
             <>
-              {" "}
               <Button
                 className="cards_btn"
                 sx={{

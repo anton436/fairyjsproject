@@ -27,7 +27,7 @@ export default function Cart() {
   React.useEffect(() => {
     getCart();
   }, []);
-  console.log(cart);
+
   const cartCleaner = () => {
     localStorage.removeItem("cart");
     getCart();
@@ -35,7 +35,7 @@ export default function Cart() {
 
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 600 }} aria-label="simple table">
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>Picture</TableCell>
@@ -43,7 +43,8 @@ export default function Cart() {
             <TableCell align="right">Type</TableCell>
             <TableCell align="right">Description</TableCell>
             <TableCell align="right">Price</TableCell>
-            <TableCell align="right">Subprice</TableCell>
+            <TableCell align="right">Count</TableCell>
+            <TableCell align="right">SubPrice</TableCell>
             <TableCell align="right">-</TableCell>
           </TableRow>
         </TableHead>
@@ -54,7 +55,7 @@ export default function Cart() {
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                <img src={row.item.picture} width="70" height="70" />
+                <img src={row.item.picture} width="100" height="100" alt="" />
               </TableCell>
               <TableCell align="right">{row.item.name}</TableCell>
               <TableCell align="right">{row.item.type}</TableCell>
@@ -74,7 +75,7 @@ export default function Cart() {
               <TableCell align="right">{row.subPrice}</TableCell>
               <TableCell align="right">
                 <Button onClick={() => deleteCartProduct(row.item.id)}>
-                  Delete
+                  DELETE
                 </Button>
               </TableCell>
             </TableRow>

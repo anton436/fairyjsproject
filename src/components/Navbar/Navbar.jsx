@@ -20,6 +20,11 @@ import instagram from "./images/instagram_icon.png";
 import "./navbar.css";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import { ADMIN } from "../../helpers/consts";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { Badge } from "@mui/material";
+import { useState } from "react";
+import { useCart } from "../../contexts/CartContextProvider";
+import { getCountProductsInCart } from "../../helpers/functions";
 
 const pages = [
   { name: "Каталог кроватей", link: "/", id: 1 },
@@ -67,6 +72,13 @@ function Navbar() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const [count, setCount] = React.useState(0);
+  const { addProductToCart } = useCart();
+
+  React.useEffect(() => {
+    setCount(getCountProductsInCart());
+  }, [addProductToCart]);
 
   return (
     <AppBar position="static" style={{ backgroundColor: "#fef9ef" }}>
@@ -206,6 +218,12 @@ function Navbar() {
                 <Typography id="pages_link">Login</Typography>
               </Button>
             )}
+
+            <IconButton onClick={() => navigate("/cart")}>
+              <Badge badgeContent={count} color="primary">
+                <ShoppingCartIcon />
+              </Badge>
+            </IconButton>
           </Box>
           <Button
             className="btn_contact"

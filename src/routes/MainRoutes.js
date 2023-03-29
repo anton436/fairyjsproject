@@ -1,5 +1,6 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+import Cart from "../components/Cart/Cart";
 import Company from "../components/Company/Company";
 import ContactUs from "../components/ContactUs/ContactUs";
 import ProductCard from "../components/product/ProductCard";
@@ -23,6 +24,7 @@ const MainRoutes = () => {
     { link: "/contacts", element: <ContactUs />, id: 7 },
     { link: "/details/:id", element: <DetailsPage />, id: 8 },
     { link: "/auth", element: <AuthPage />, id: 9 },
+    { link: "/cart", element: <Cart />, id: 10 },
   ];
 
   const PRIVATE_ROUTES = [

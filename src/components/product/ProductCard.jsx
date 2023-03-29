@@ -11,6 +11,9 @@ import { Box } from "@mui/system";
 import "./Product.css";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import { ADMIN } from "../../helpers/consts";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { IconButton } from "@mui/material";
+import { useCart } from "../../contexts/CartContextProvider";
 <style>
   @import
   url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans:wght@300&display=swap');
@@ -22,6 +25,8 @@ export default function ProductCard({ item }) {
   const {
     user: { email },
   } = useAuth();
+
+  const { addProductToCart, checkProductInCart } = useCart();
   return (
     <Card
       className="cards"
@@ -110,9 +115,14 @@ export default function ProductCard({ item }) {
             Details
           </Button>
 
+          <IconButton onClick={() => addProductToCart(item)}>
+            <ShoppingCartIcon
+              color={checkProductInCart(item.id) ? "primary" : ""}
+            />
+          </IconButton>
+
           {email === ADMIN ? (
             <>
-              {" "}
               <Button
                 className="cards_btn"
                 sx={{
